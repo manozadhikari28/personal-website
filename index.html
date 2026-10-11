@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Manoj Adhikari, Ph.D. — wind engineering, structural reliability and machine learning for infrastructure. Postdoctoral Fellow, Auburn University.">
+<meta name="author" content="Manoj Adhikari">
+<link rel="canonical" href="https://manoj-adhikari.com/">
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Manoj Adhikari, Ph.D.">
+<meta property="og:description" content="Wind engineering, structural reliability and machine learning for infrastructure.">
+<meta property="og:image" content="https://manoj-adhikari.com/profile.jpg">
+<meta property="og:url" content="https://manoj-adhikari.com/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#14202b">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Manoj Adhikari", "honorificSuffix": "Ph.D.", "url": "https://manoj-adhikari.com/", "image": "https://manoj-adhikari.com/profile.jpg", "jobTitle": "Postdoctoral Fellow", "worksFor": {"@type": "CollegeOrUniversity", "name": "Auburn University"}, "alumniOf": [{"@type": "CollegeOrUniversity", "name": "Rensselaer Polytechnic Institute"}, {"@type": "CollegeOrUniversity", "name": "Tribhuvan University"}], "knowsAbout": ["Wind engineering", "Structural reliability", "Extreme value analysis", "Wind directionality", "Machine learning for infrastructure", "Performance-based design"], "sameAs": ["https://scholar.google.com/citations?user=ia4XW-YAAAAJ", "https://orcid.org/0000-0003-0730-2709", "https://www.linkedin.com/in/manoj-adhikari-b71523110/", "https://www.researchgate.net/profile/Manoj-Adhikari-5"]}</script>
+<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Manoj Adhikari, Ph.D. | Wind &amp; Structural Engineering</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: wind-tunnel instrument panel — a live flow field opens the site; pages read like test reports with mono data readouts. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --surface-2:#e8ecf0; --fg:#14202b; --muted:#566573; --line:#d3dae1;
+  --accent:#d9480f; --accent-soft:#fde4d6; --frame:#6741d9; --steel:#1f5f8b; --steel-soft:#dbe8f2; --flow:#1f5f8b;
+  --display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --body:"IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:10px; --shadow:0 1px 2px rgba(20,32,43,.06),0 8px 24px rgba(20,32,43,.07);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0c141c; --surface:#121d28; --surface-2:#192735; --fg:#e6edf3; --muted:#93a4b4; --line:#253646;
+  --accent:#ff7a3d; --accent-soft:#3a2216; --frame:#b197fc; --steel:#6fb3e0; --steel-soft:#16314a; --flow:#6fb3e0;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35); color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0c141c; --surface:#121d28; --surface-2:#192735; --fg:#e6edf3; --muted:#93a4b4; --line:#253646;
+  --accent:#ff7a3d; --accent-soft:#3a2216; --frame:#b197fc; --steel:#6fb3e0; --steel-soft:#16314a; --flow:#6fb3e0;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35); color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--steel);text-underline-offset:3px}
+a:hover{color:var(--accent)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+h1,h2,h3,h4{font-family:var(--display);line-height:1.1;text-wrap:balance;margin:0}
+p{margin:0}
+.mono{font-family:var(--mono)}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+
+/* ---------- NAV ---------- */
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:16px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-family:var(--display);font-weight:800;font-size:1.1rem;white-space:nowrap}
+.brand-mark{width:34px;height:34px;border-radius:8px;background:var(--fg);color:var(--bg);display:grid;place-items:center;font-size:.85rem;letter-spacing:.02em}
+.brand small{display:block;font-family:var(--mono);font-weight:400;font-size:.66rem;color:var(--muted);letter-spacing:.08em}
+nav.links{display:flex;gap:2px;margin-left:auto}
+nav.links a{position:relative;padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:500;font-size:.93rem;transition:color .2s,background .2s}
+nav.links a:hover{color:var(--fg);background:var(--surface-2)}
+nav.links a.active{color:var(--fg)}
+nav.links a.active::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;background:var(--accent);border-radius:2px;animation:grow .35s ease}
+@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.icon-btn{width:40px;height:40px;border-radius:10px;border:1px solid var(--line);background:var(--surface);color:var(--fg);display:grid;place-items:center;cursor:pointer;flex:none}
+.icon-btn:hover{border-color:var(--accent)}
+.icon-btn svg{width:18px;height:18px}
+#menuBtn{display:none}
+@media (max-width:920px){
+  #menuBtn{display:grid;margin-left:auto}
+  nav.links{position:fixed;inset:64px 0 auto 0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px 20px;gap:4px;transform:translateY(-120%);transition:transform .3s ease;margin:0}
+  nav.links.open{transform:none}
+  nav.links a{padding:12px}
+}
+.scroll-prog{position:absolute;left:0;bottom:-1px;height:2px;background:var(--accent);width:0}
+
+/* ---------- PAGES ---------- */
+.page{display:none;padding-block:0 80px}
+.page.show{display:block;animation:pageIn .55s cubic-bezier(.2,.7,.2,1)}
+@keyframes pageIn{from{opacity:.001;transform:translateY(14px)}to{opacity:1;transform:none}}
+.page-head{padding-block:56px 32px;border-bottom:1px solid var(--line);margin-bottom:40px}
+.page-head h1,.page-head .ph{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:800;letter-spacing:-.02em;margin-top:10px}
+.page-head p{max-width:64ch;margin-top:14px;color:var(--muted);font-size:1.08rem}
+section+section{margin-top:64px}
+h2.sec{font-size:clamp(1.5rem,3vw,2rem);font-weight:700;letter-spacing:-.01em;margin-bottom:20px}
+
+/* ---------- HERO ---------- */
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
+#flow{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:crosshair}
+.hero-in{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(220px,300px);gap:48px;align-items:center;padding-block:56px 36px;pointer-events:none}
+.hero-in > *{pointer-events:auto}
+.hero-text{min-width:0}
+.hero h1{font-size:clamp(2.6rem,7vw,5.2rem);font-weight:800;letter-spacing:-.035em;margin-top:14px}
+.hero h1 .accent{color:var(--accent)}
+.hero h1 .phd{font-size:.42em;font-weight:600;letter-spacing:-.01em;color:var(--muted);white-space:nowrap}
+.role{font-family:var(--mono);font-size:clamp(.95rem,2vw,1.1rem);margin-top:18px;min-height:1.7em;color:var(--fg)}
+.role .caret{display:inline-block;width:.6ch;background:var(--accent);margin-left:2px;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.hero .lede{max-width:56ch;margin-top:18px;font-size:1.1rem;color:var(--muted);background:color-mix(in srgb,var(--bg) 70%,transparent);border-radius:6px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 18px;border-radius:10px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--line);background:var(--surface);color:var(--fg);cursor:pointer;transition:transform .15s,border-color .2s,background .2s;font-family:var(--body)}
+.btn:hover{transform:translateY(-2px);border-color:var(--accent);color:var(--fg)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.btn.primary:hover{color:#fff;filter:brightness(1.08)}
+.btn svg{width:17px;height:17px}
+.socials{display:flex;gap:8px;margin-top:22px;flex-wrap:wrap}
+.soc{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:var(--surface);display:grid;place-items:center;color:var(--fg);transition:transform .2s,background .2s,color .2s}
+.soc:hover{transform:translateY(-3px) rotate(-6deg);background:var(--fg);color:var(--bg)}
+.soc svg{width:19px;height:19px}
+
+.portrait-card{position:relative;justify-self:end;width:100%}
+.bspace{min-height:160px;pointer-events:none!important}
+.photo-slot{position:relative;aspect-ratio:4/5;max-width:100%;border-radius:16px;overflow:hidden;background:
+  repeating-linear-gradient(135deg,var(--surface-2) 0 10px,var(--surface) 10px 20px);border:1.5px dashed var(--line);display:grid;place-items:center;text-align:center;cursor:pointer;transition:border-color .2s}
+.photo-slot:hover{border-color:var(--accent)}
+.photo-slot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo-slot .ph{padding:18px;color:var(--muted);font-size:.85rem;display:grid;gap:8px;justify-items:center}
+.photo-slot .ph svg{width:42px;height:42px;opacity:.6}
+.photo-slot .ph b{font-family:var(--mono);font-weight:500;color:var(--fg);font-size:.78rem;letter-spacing:.05em}
+.photo-slot input{display:none}
+.portrait-card .tag{position:absolute;left:-14px;bottom:22px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;box-shadow:var(--shadow);font-size:.82rem;animation:float 5s ease-in-out infinite}
+.portrait-card .tag2{left:auto;right:-12px;top:22px;bottom:auto;animation-delay:-2.5s}
+.tag .dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#2f9e44;margin-right:6px;box-shadow:0 0 0 4px rgba(47,158,68,.18)}
+@keyframes float{50%{transform:translateY(-8px)}}
+
+.instrument{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:30px;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+.dial{width:64px;height:64px;flex:none;border-radius:50%;border:1px solid var(--line);background:var(--surface);position:relative;cursor:grab;touch-action:none}
+.dial::before{content:"N";position:absolute;top:2px;left:50%;transform:translateX(-50%);font-size:.6rem;color:var(--muted)}
+.dial .needle{position:absolute;left:50%;top:50%;width:2px;height:26px;background:var(--accent);transform-origin:50% 0;border-radius:2px}
+.dial .hub{position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px;border-radius:50%;background:var(--fg)}
+.readout b{color:var(--fg);font-weight:500}
+.readout{line-height:1.7}
+
+@media (max-width:820px){
+  .hero-in{grid-template-columns:1fr;padding-block:44px}
+  .bspace{height:190px}
+  .portrait-card{justify-self:start;width:min(280px,100%)}
+  .portrait-card .tag{left:8px}.portrait-card .tag2{right:8px}
+}
+
+
+/* ---------- HERO DIRECTIONALITY PANEL ---------- */
+.hero{background:radial-gradient(1200px 400px at 80% -10%,var(--steel-soft),transparent 70%),var(--bg)}
+.wx{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(16px,2.6vw,26px);margin-bottom:48px;box-shadow:var(--shadow)}
+.wx-head{display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between;align-items:flex-end;margin-bottom:14px}
+.wx-head h2{font-size:clamp(1.15rem,2.2vw,1.45rem);margin-top:6px;font-weight:700}
+.wx-ctl{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.wx-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr) minmax(0,.85fr);gap:20px;align-items:center}
+.wx-cell{margin:0;min-width:0}
+.wx-cell figcaption{font-size:.8rem;color:var(--muted);text-align:center;margin-top:6px}
+#wxRose{cursor:grab;touch-action:none}
+.wx-read{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:14px;padding-top:14px;border-top:1px solid var(--line)}
+.wx-read div{font-size:.78rem;color:var(--muted)}
+.wx-read b{display:block;font-family:var(--mono);font-weight:500;font-size:1.05rem;color:var(--fg)}
+.wx-read b.acc{color:var(--accent)}
+@media (max-width:900px){.wx-grid{grid-template-columns:1fr 1fr}.wx-grid .wx-cell:nth-child(2){grid-column:1/-1;order:3}.wx-read{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.wx-grid{grid-template-columns:1fr}}
+/* ---------- STATS ---------- */
+.stats{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--line);border-radius:14px;background:var(--surface);overflow:hidden;margin-top:48px}
+.stat{padding:20px 18px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .n{font-family:var(--display);font-weight:700;font-size:1.9rem;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.stat .n span{color:var(--accent)}
+.stat .l{font-size:.82rem;color:var(--muted);line-height:1.35;margin-top:4px}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,1fr)!important}.stat:nth-child(2){border-right:0}.stat:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+@media (max-width:480px){.stats{grid-template-columns:repeat(2,1fr)}.stat{border-right:1px solid var(--line)!important;border-bottom:1px solid var(--line)}.stat:nth-child(2n){border-right:0!important}}
+
+/* ---------- GRID / CARDS ---------- */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:860px){.g2,.g3{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;min-width:0;transition:transform .25s,box-shadow .25s,border-color .25s}
+.card.lift:hover{transform:translateY(-4px);box-shadow:var(--shadow);border-color:color-mix(in srgb,var(--accent) 45%,var(--line))}
+.card h3{font-size:1.2rem;font-weight:700;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.96rem}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 11px;border-radius:999px;border:1px solid var(--line);font-size:.82rem;background:var(--surface);color:var(--fg);white-space:nowrap}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.ico{width:44px;height:44px;border-radius:10px;background:var(--steel-soft);color:var(--steel);display:grid;place-items:center;margin-bottom:16px}
+.ico svg{width:22px;height:22px}
+
+/* about split */
+.about{display:grid;grid-template-columns:1fr;max-width:820px;gap:40px;align-items:start}
+.about .photo-slot{aspect-ratio:3/2}
+.about p+p{margin-top:14px}
+.about .body p{font-size:1.05rem}
+@media (max-width:820px){.about{grid-template-columns:1fr}}
+
+/* marquee */
+.marquee{overflow:hidden;border-block:1px solid var(--line);background:var(--surface);margin-top:64px;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.marquee-track{display:flex;gap:36px;width:max-content;padding-block:16px;animation:mq 40s linear infinite;font-family:var(--mono);font-size:.85rem;color:var(--muted)}
+.marquee-track span::before{content:"◆";color:var(--accent);margin-right:12px;font-size:.6rem;vertical-align:2px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ---------- RESEARCH WIDGETS ---------- */
+.thrust{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.thrust .num{font-family:var(--mono);font-size:.8rem;color:var(--accent);border:1px solid var(--accent);border-radius:6px;padding:2px 7px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:clamp(18px,3vw,32px);min-width:0}
+.panel-head{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:baseline;margin-bottom:18px}
+.panel-head h3{font-size:1.35rem}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:10px;padding:3px;background:var(--surface-2);flex-wrap:wrap}
+.seg button{border:0;background:transparent;color:var(--muted);font:500 .88rem var(--body);padding:7px 14px;border-radius:7px;cursor:pointer}
+.seg button.on{background:var(--surface);color:var(--fg);box-shadow:var(--shadow)}
+.viz{width:100%;height:auto;display:block;overflow:visible}
+.viz text{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+.viz .lbl{fill:var(--fg);font-weight:500}
+.kv{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.kv div{border-top:2px solid var(--line);padding-top:10px}
+.kv b{display:block;font-family:var(--display);font-size:1.7rem;font-variant-numeric:tabular-nums}
+.kv span{font-size:.82rem;color:var(--muted)}
+@media (max-width:560px){.kv{grid-template-columns:1fr 1fr}}
+.sites{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.sites button{font:500 .85rem var(--body);border:1px solid var(--line);background:var(--surface);color:var(--fg);padding:6px 12px;border-radius:999px;cursor:pointer}
+.sites button.on{border-color:var(--accent);background:var(--accent-soft)}
+.note{font-size:.82rem;color:var(--muted);margin-top:12px}
+.pipeline{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;counter-reset:s}
+.pipeline div{position:relative;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 14px;font-size:.88rem;min-width:0}
+.pipeline div b{display:block;font-family:var(--display);font-size:1rem;margin-bottom:4px}
+.pipeline div::before{counter-increment:s;content:"STEP " counter(s);font-family:var(--mono);font-size:.68rem;color:var(--accent);letter-spacing:.1em}
+.pipeline div:not(:last-child)::after{content:"→";position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--accent);font-weight:700;z-index:1;background:var(--bg);line-height:1}
+@media (max-width:860px){.pipeline{grid-template-columns:1fr}.pipeline div:not(:last-child)::after{content:"↓";right:auto;left:20px;top:auto;bottom:-14px;transform:none}}
+
+.qmfw{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-bottom:22px;padding-bottom:20px;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--muted)}.qmfw b{display:block;font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);font-weight:500;margin-bottom:4px}@media (max-width:760px){.qmfw{grid-template-columns:1fr 1fr}}
+.thrusts .card h3{margin:10px 0 8px}.thrusts .card p+p{margin-top:10px}.thrusts .q{font-size:.88rem;color:var(--fg);border-left:2px solid var(--accent);padding-left:10px}.tagrow{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.chip.k{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;background:var(--steel-soft);color:var(--steel);border-color:transparent}
+/* ---------- PUBLICATIONS ---------- */
+.toolbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:24px}
+.search{flex:1 1 240px;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:10px;background:var(--surface);padding:0 12px}
+.search input{flex:1;border:0;background:transparent;color:var(--fg);font:400 .95rem var(--body);padding:11px 0;min-width:0}
+.search input:focus{outline:none}
+.search:focus-within{border-color:var(--accent)}
+.pub{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--line)}
+.pub .yr{font-family:var(--mono);font-size:.9rem;color:var(--muted);padding-top:3px}
+.pub h3{font-family:var(--body);font-size:1.07rem;font-weight:600;line-height:1.4}
+.pub .meta{font-size:.9rem;color:var(--muted);margin-top:6px}
+.pub .meta i{color:var(--fg)}
+.pub .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;align-items:center}
+.badge{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:5px;background:var(--steel-soft);color:var(--steel)}
+.badge.rev{background:var(--accent-soft);color:var(--accent)}
+.mini{font:500 .8rem var(--body);border:1px solid var(--line);background:transparent;color:var(--fg);padding:4px 10px;border-radius:6px;cursor:pointer;text-decoration:none}
+.mini:hover{border-color:var(--accent);color:var(--accent)}
+.empty{padding:40px 0;color:var(--muted);text-align:center}
+@media (max-width:560px){.pub{grid-template-columns:1fr;gap:4px}}
+
+
+/* ---------- CV PAGE ---------- */
+.cv-sec{display:grid;grid-template-columns:200px minmax(0,1fr);gap:24px;padding-block:26px;border-top:1px solid var(--line)}
+.cv-sec>h2{font-family:var(--mono);font-weight:500;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);padding-top:4px}
+.cv-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding-bottom:14px}
+.cv-row+.cv-row{padding-top:2px}
+.cv-row .t{font-weight:600}
+.cv-row .d{font-family:var(--mono);font-size:.82rem;color:var(--muted);white-space:nowrap;text-align:right}
+.cv-row .o{grid-column:1/-1;color:var(--muted);font-size:.95rem}
+.cv-row details{grid-column:1/-1}
+.cv-row summary{cursor:pointer;color:var(--steel);font-size:.86rem;font-weight:500;width:max-content}
+.cv-row ul{margin:6px 0 0;padding-left:18px;font-size:.95rem}
+.cv-row li{margin-top:4px}
+.cv-cite{padding-left:1.6em;text-indent:-1.6em;margin-bottom:10px;font-size:.96rem}
+.cv-sub{font-weight:600;font-size:.92rem;margin:4px 0 10px;color:var(--fg)}
+.cv-sub:not(:first-child){margin-top:18px}
+.cv-tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:8px}
+@media (max-width:760px){.cv-sec{grid-template-columns:1fr;gap:10px}.cv-row{grid-template-columns:1fr}.cv-row .d{text-align:left}}
+/* ---------- TIMELINE ---------- */
+.tl{position:relative;padding-left:28px}
+.tl::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--accent),var(--steel))}
+.tl-item{position:relative;padding-bottom:30px}
+.tl-item::before{content:"";position:absolute;left:-27px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.tl-item.now::before{background:var(--accent);box-shadow:0 0 0 6px var(--accent-soft);animation:pulse 2s infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 11px transparent}}
+.tl-item .when{font-family:var(--mono);font-size:.8rem;color:var(--accent)}
+.tl-item h3{font-size:1.2rem;margin-top:4px}
+.tl-item .org{color:var(--muted);font-size:.95rem;margin-top:2px}
+.tl-item ul{margin:10px 0 0;padding-left:18px;color:var(--fg);font-size:.95rem}
+.tl-item li{margin-top:5px}
+.tl-item details summary{cursor:pointer;color:var(--steel);font-size:.88rem;margin-top:8px;font-weight:500}
+
+/* skills meter */
+.skill-group h4{font-family:var(--mono);font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;font-weight:500}
+.skill-group+.skill-group{margin-top:22px}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.gallery .photo-slot{aspect-ratio:4/3}
+.gallery figure{margin:0;min-width:0}
+.gallery figcaption{font-size:.84rem;color:var(--muted);margin-top:8px}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr}}
+@media (max-width:440px){.gallery{grid-template-columns:1fr}}
+
+/* review cards */
+.review{position:relative;overflow:hidden}
+.review .rn{position:absolute;right:16px;top:8px;font-family:var(--display);font-weight:800;font-size:4rem;color:var(--surface-2);line-height:1}
+.review .slot{display:inline-block;border:1px dashed var(--accent);color:var(--accent);border-radius:6px;padding:1px 8px;font-family:var(--mono);font-size:.8rem}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.cc{display:flex;gap:14px;align-items:flex-start}
+.cc .ico{margin:0;flex:none}
+.cc .v{font-family:var(--mono);font-size:.9rem;word-break:break-all;color:var(--fg)}
+.cc .k{font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}
+.form{display:grid;gap:12px}
+.form label{font-size:.85rem;font-weight:500}
+.form input,.form textarea,.form select{width:100%;border:1px solid var(--line);background:var(--surface);color:var(--fg);border-radius:10px;padding:11px 12px;font:400 .95rem var(--body)}
+.form textarea{min-height:120px;resize:vertical}
+.toast{visibility:hidden;position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,140%);background:var(--fg);color:var(--bg);padding:11px 18px;border-radius:10px;font-size:.9rem;z-index:99;transition:transform .3s}
+.toast.on{visibility:visible;transform:translate(-50%,0)}
+
+footer{border-top:1px solid var(--line);padding-block:32px;font-size:.88rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center}
+
+.reveal{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+@keyframes rise{from{transform:translateY(16px)}to{transform:none}}
+
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-scholar" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 1 9l11 7 9-5.7V17h2V9L12 2zm-6.5 11.3V17c0 2.2 2.9 4 6.5 4s6.5-1.8 6.5-4v-3.7L12 17.4l-6.5-4.1z"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.1V21h-4v-4.94c0-1.18-.02-2.7-1.64-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4z"/></symbol>
+  <symbol id="i-orcid" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM8.4 17.2H6.9V8.5h1.5zm-.75-9.8a.95.95 0 1 1 0-1.9.95.95 0 0 1 0 1.9zm2.55 1.1h3.4c3.1 0 4.6 2.2 4.6 4.35 0 2.33-1.83 4.35-4.6 4.35h-3.4zm1.5 1.35v6h1.8c2.6 0 3.2-1.97 3.2-3 0-1.68-1.07-3-3.25-3z"/></symbol>
+  <symbol id="i-rg" viewBox="0 0 24 24"><text x="12" y="16.5" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="12" fill="currentColor">RG</text></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-cam" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8a2 2 0 0 1 2-2h2.5l1.5-2h6l1.5 2H19a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><circle cx="12" cy="13" r="3.5"/></symbol>
+  <symbol id="i-wind" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h16a3 3 0 1 1-3 3M3 16h8"/></symbol>
+  <symbol id="i-dice" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8" cy="8" r="1.2" fill="currentColor"/><circle cx="16" cy="16" r="1.2" fill="currentColor"/><circle cx="12" cy="12" r="1.2" fill="currentColor"/></symbol>
+  <symbol id="i-chip" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></symbol>
+  <symbol id="i-frame" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M3 21V10l9-6 9 6v11M3 10h18M8 21v-6h8v6"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 3 2.5 15 0 18M12 3c-2.5 3-2.5 15 0 18"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M4 4h6a3 3 0 0 1 3 3v13a2 2 0 0 0-2-2H4zM20 4h-6a3 3 0 0 0-3 3v13a2 2 0 0 1 2-2h7z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3 8-8"/><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v1"/></symbol>
+</svg>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#home"><span class="brand-mark">MA</span><span>Manoj Adhikari<small>WIND · RELIABILITY · ML</small></span></a>
+    <nav class="links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#cv">CV</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#service">Service</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="themeBtn" aria-label="Toggle color theme"><svg><use href="#i-moon"/></svg></button>
+    <button class="icon-btn" id="menuBtn" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button>
+  </div>
+  <div class="scroll-prog" id="prog"></div>
+</header>
+
+<main>
+<!-- ================= HOME ================= -->
+<div class="page" id="p-home">
+  <div class="hero">
+    <div class="wrap hero-in">
+      <div class="hero-text">
+        <div class="eyebrow">Postdoctoral Fellow · Auburn University</div>
+        <h1>Manoj<br>Adhikari<span class="accent">,</span> <span class="phd">Ph.D.</span></h1>
+        <div class="role">Wind Engineering · Structural Reliability · Machine Learning for Infrastructure</div>
+        <p class="lede">My research quantifies how uncertainty in extreme wind hazards propagates into the safety and serviceability of buildings, and how design standards should account for it.</p>
+        <div class="cta">
+          <a class="btn primary" href="#research">Research <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn" href="#cv"><svg><use href="#i-doc"/></svg> CV</a>
+          <a class="btn" href="#contact"><svg><use href="#i-mail"/></svg> Contact</a>
+        </div>
+        <div class="socials">
+          <a class="soc" href="https://scholar.google.com/citations?user=ia4XW-YAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar"><svg><use href="#i-scholar"/></svg></a>
+          <a class="soc" href="https://www.linkedin.com/in/manoj-adhikari-b71523110/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+          <a class="soc" href="https://orcid.org/0000-0003-0730-2709" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID"><svg><use href="#i-orcid"/></svg></a>
+          <a class="soc" href="https://www.researchgate.net/profile/Manoj-Adhikari-5" target="_blank" rel="noopener" aria-label="ResearchGate" title="ResearchGate"><svg><use href="#i-rg"/></svg></a>
+          <a class="soc" href="#contact" aria-label="Email" title="Email"><svg><use href="#i-mail"/></svg></a>
+        </div>
+      </div>
+      <div class="portrait-card">
+        <div class="photo-slot" style="border-style:solid;cursor:default"><img src="profile.jpg" alt="Manoj Adhikari" style="object-position:center"></div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="wx" id="wx">
+        <div class="wx-head">
+          <div><div class="eyebrow">How wind directionality works</div><h2>The strongest wind rarely hits a building's weakest direction.</h2></div>
+          <div class="wx-ctl"><button class="mini" id="wxPlay" type="button" aria-pressed="true">Pause</button><span class="note" style="margin:0">Drag the rose to set wind direction</span></div>
+        </div>
+        <div class="wx-grid">
+          <figure class="wx-cell"><svg id="wxRose" class="viz" viewBox="0 0 300 300" role="img" aria-label="Wind rose of extreme wind speed by direction with the building plan at the center"></svg><figcaption>Extreme wind speed by direction, with the building in plan and the <span style="color:var(--frame);font-weight:600">frame</span> shown at right</figcaption></figure>
+          <figure class="wx-cell"><svg id="wxResp" class="viz" viewBox="0 0 420 260" role="img" aria-label="Wind speed and structural response against wind direction"></svg><figcaption>Wind alone versus structural response, by direction</figcaption></figure>
+          <figure class="wx-cell"><svg id="wxFrame" class="viz" viewBox="0 0 260 236" role="img" aria-label="Portal frame swaying under wind load"></svg><figcaption><div style="margin-bottom:6px"><span style="color:var(--frame);font-weight:600">Frame</span> cross-section, looking east</div><span class="seg" id="wxDyn" style="padding:2px"><button class="on" data-d="0" type="button">Static</button><button data-d="1" type="button">Dynamic</button></span></figcaption></figure>
+        </div>
+        <div class="wx-read" id="wxRead"></div>
+        <p class="note" style="margin-top:6px">Illustrative values for one hypothetical site and building. For the computed results across six U.S. sites, see <a href="#research">Research</a>.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="stats" style="grid-template-columns:repeat(4,1fr)">
+      <div class="stat"><div class="n">4</div><div class="l">peer-reviewed journal articles</div></div>
+      <div class="stat"><div class="n">4</div><div class="l">conference presentations, including ICWE16</div></div>
+      <div class="stat"><div class="n">5</div><div class="l">years as a teaching assistant at RPI</div></div>
+      <div class="stat" style="border-right:0"><div class="n">6</div><div class="l">years of engineering practice in Nepal</div></div>
+    </div>
+
+    <section style="margin-top:72px">
+      <div class="about">
+        <div hidden id="aboutPhoto">
+          <label class="photo-slot" data-slot="about">
+            <input type="file" accept="image/*">
+            <div class="ph"><svg><use href="#i-cam"/></svg><b>FIELD / LAB PHOTO</b><span>e.g. you at the wind tunnel or in the field.<br>Click to preview.</span></div>
+          </label>
+        </div>
+        <div class="body">
+          <div class="eyebrow">About</div>
+          <h2 class="sec" style="margin-top:8px">Background</h2>
+          <p>I completed my Ph.D. in Civil Engineering at Rensselaer Polytechnic Institute under Prof. Chris Letchford. My dissertation, <i>A Reliability-Based Framework for Performance Assessment of Low-Rise Buildings Under Directional Wind Loading</i>, links directional extreme value analysis, wind-tunnel pressure data, dynamic response and Monte Carlo reliability in one framework. The degree is formally conferred in December 2026.</p>
+          <p>Since September 2026 I have been a postdoctoral fellow with Dr. David Roueche at Auburn University, working on wind climate, wind engineering and structural engineering, including individualized structural wind risk for residents.</p>
+          <p>Before graduate school I spent six years in practice in Nepal: assessing damage after the 2015 Gorkha earthquake with NSET, then designing reinforced-concrete and steel buildings for gravity, wind and seismic loads at Paragon Engineering.</p>
+          <div class="chips" style="margin-top:20px">
+            <span class="chip">Wind engineering</span><span class="chip">Structural reliability</span><span class="chip">Extreme value analysis</span><span class="chip">Performance-based design</span><span class="chip">ML surrogates</span><span class="chip">Multi-hazard risk</span><span class="chip">Earthquake engineering</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Expertise</div>
+      <h2 class="sec" style="margin-top:8px">Research areas</h2>
+      <div class="grid g3">
+        <a class="card lift" href="#research" style="text-decoration:none;color:inherit">
+          <div class="ico"><svg><use href="#i-wind"/></svg></div>
+          <h3>Wind hazard &amp; directionality</h3>
+          <p>Directional extreme value analysis (XIMIS, de Haan/GPD) of thunderstorm and synoptic records, superstation pooling for sparse data, and response-based K<sub>d</sub> factors.</p>
+        </a>
+        <a class="card lift" href="#research" style="text-decoration:none;color:inherit">
+          <div class="ico"><svg><use href="#i-dice"/></svg></div>
+          <h3>Reliability &amp; risk</h3>
+          <p>Monte Carlo reliability for strength and serviceability, dynamic time-history and PSD analysis, fragility curves, and reliability-based code calibration.</p>
+        </a>
+        <a class="card lift" href="#research" style="text-decoration:none;color:inherit">
+          <div class="ico"><svg><use href="#i-chip"/></svg></div>
+          <h3>Machine learning for structures</h3>
+          <p>Decision Tree, Random Forest, XGBoost, ANN and CNN surrogates trained on the NIST–UWO and TPU aerodynamic databases, with clear limits on extrapolation.</p>
+        </a>
+      </div>
+    </section>
+    <section>
+      <div class="eyebrow">Recent publications</div>
+      <h2 class="sec" style="margin-top:8px">Selected work</h2>
+      <div>
+        <div class="pub"><div class="yr">2026</div><div style="min-width:0"><h3>Evaluation of wind directionality factors on moments and displacements of a low-rise building</h3><div class="meta"><b>Adhikari, M.</b>, &amp; Letchford, C.W. · <i>Engineering Structures</i>, 369(2), 123833</div><div class="acts"><span class="badge">Journal</span><a class="mini" href="https://doi.org/10.1016/j.engstruct.2026.123833" target="_blank" rel="noopener">DOI ↗</a></div></div></div>
+        <div class="pub"><div class="yr">2025</div><div style="min-width:0"><h3>Exploring wind load effects on structures: An insight into machine learning applications</h3><div class="meta"><b>Adhikari, M.</b>, &amp; Letchford, C.W. · <i>Wind and Structures</i>, 40(3), 167–177</div><div class="acts"><span class="badge">Journal</span><a class="mini" href="https://doi.org/10.12989/was.2025.40.3.167" target="_blank" rel="noopener">DOI ↗</a></div></div></div>
+        <div class="pub"><div class="yr">2026</div><div style="min-width:0"><h3>Reliability assessment of a low-rise structure under wind loading: Implications for serviceability reliability and the wind directionality factor</h3><div class="meta"><b>Adhikari, M.</b>, Letchford, C.W., &amp; Li, M. · <i>Engineering Structures</i></div><div class="acts"><span class="badge rev">Under review</span></div></div></div>
+      </div>
+      <a class="btn" style="margin-top:20px" href="#publications">All publications <svg><use href="#i-arrow"/></svg></a>
+    </section>
+  </div>
+
+</div>
+
+<!-- ================= CV ================= -->
+<div class="page" id="p-cv">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Curriculum Vitae</div>
+      <h2 class="ph">Manoj Adhikari</h2>
+      <p>Postdoctoral Fellow, Auburn University · Ph.D. (defended), Rensselaer Polytechnic Institute; conferral December 2026</p>
+    </div>
+    <div class="cv-tools">
+      <button class="btn" id="cvExpand" type="button">Expand all positions</button>
+      <a class="btn" href="Manoj_Adhikari_CV.pdf" target="_blank" rel="noopener"><svg><use href="#i-doc"/></svg> PDF version</a>
+      <span class="note" style="margin:0">Updated October 2026</span>
+    </div>
+    <div id="cvBody"></div>
+  </div>
+</div>
+
+<!-- ================= RESEARCH ================= -->
+<div class="page" id="p-research">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Research</div>
+      <h2 class="ph">Reliability-based assessment of buildings under directional wind loading</h2>
+      <p>ASCE 7-22 applies a single wind directionality factor across all locations and responses. My work shows that the appropriate value depends on location, storm type and response quantity, and that dynamic effects can govern serviceability even for buildings classified as rigid.</p>
+    </div>
+
+    <section>
+      <h2 class="sec">The framework</h2>
+      <div class="pipeline">
+        <div><b>Wind climate</b>Thunderstorm and synoptic records at six U.S. sites, separated by storm type.</div>
+        <div><b>Directional EVA</b>XIMIS and de Haan/GPD fits, with superstations where data are sparse.</div>
+        <div><b>Aerodynamics</b>NIST aerodynamic database pressure histories at 72 orientations.</div>
+        <div><b>Structural response</b>SAP2000 / OpenSeesPy, static and dynamic time-history analysis.</div>
+        <div><b>Reliability</b>Monte Carlo simulation of strength and serviceability limit states.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">Finding 1 · Engineering Structures, 2026</div><h3 style="margin-top:6px">Response-based wind directionality factors</h3></div>
+        </div>
+        <div class="qmfw"><div><b>Question</b>Is the single ASCE 7-22 directionality factor of 0.85 appropriate for every site and structural response?</div><div><b>Method</b>Directional extreme value analysis (XIMIS, de Haan) of separated thunderstorm and synoptic records at six U.S. sites, combined with NIST aerodynamic pressure histories at 72 building orientations.</div><div><b>Finding</b>Response-based K<sub>d</sub> ranged from 0.47 to 0.95 (mean 0.72); about 19% of location–response cases exceeded 0.85.</div><div><b>Why it matters</b>A fixed factor can be unconservative for some locations and responses and overly conservative for others, which supports site- and response-specific treatment.</div></div>
+        <svg class="viz" id="kdViz" viewBox="0 0 720 150" role="img" aria-label="Range of computed Kd values from 0.47 to 0.95 with mean 0.72, compared with ASCE 7-22 value 0.85"></svg>
+        <div class="kv">
+          <div><b>0.47–0.95</b><span>range of computed K<sub>d</sub></span></div>
+          <div><b>0.72</b><span>mean across sites and responses</span></div>
+          <div><b>≈19%</b><span>of location–response cases above 0.85</span></div>
+        </div>
+        <p class="note">Study sites (click to highlight on the map below):</p>
+        <div class="sites" id="sites"></div>
+        <svg class="viz" id="mapViz" viewBox="0 0 720 300" role="img" aria-label="Approximate locations of the six study sites in the United States" style="margin-top:12px"></svg>
+        <p class="note">K<sub>d</sub> was computed for eave and ridge moments and displacements of a steel portal frame, using sector-by-sector and multi-sector methods. Map positions are schematic.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">Finding 2 · Under review, Engineering Structures</div><h3 style="margin-top:6px">Serviceability reliability with dynamic response</h3></div>
+          <div class="seg" id="relSeg"><button class="on" data-b="2.56">Static analysis</button><button data-b="1.81">With dynamic amplification</button></div>
+        </div>
+        <div class="qmfw"><div><b>Question</b>Does a frame that passes every ASCE 7-22 LRFD check actually meet target reliability under directional wind?</div><div><b>Method</b>Monte Carlo simulation with sectoral extreme wind speeds, wind-tunnel pressure histories, and static and dynamic time-history response.</div><div><b>Finding</b>Serviceability reliability of eave drift fell from β = 2.56 to 1.81 once dynamic amplification (1.05–1.38) was included.</div><div><b>Why it matters</b>The 1 Hz rigid-building threshold and climate-only K<sub>d</sub> may need revision; serviceability needs its own reliability targets.</div></div>
+        <svg class="viz" id="relViz" viewBox="0 0 720 230" role="img" aria-label="Standard normal curve with shaded failure probability beyond the reliability index"></svg>
+        <div class="kv">
+          <div><b id="relB">2.56</b><span>serviceability reliability index β</span></div>
+          <div><b id="relP">—</b><span>failure probability P<sub>f</sub> = Φ(−β)</span></div>
+          <div><b>1.05–1.38</b><span>dynamic amplification, depending on damping</span></div>
+        </div>
+        <p class="note">The steel portal frame passes every ASCE 7-22 LRFD check and is classed as rigid. With dynamic response, eave lateral displacement reliability drops from β = 2.56 to 1.81. A directionality factor derived from wind climate alone did not restore the target, which argues for reliability-based calibration.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">Finding 3 · Wind and Structures, 2025</div><h3 style="margin-top:6px">Machine learning surrogates for wind load effects</h3></div>
+          <div class="seg" id="mlSeg"><button class="on" data-c="0">Missing eave height</button><button data-c="1">Missing roof slope</button><button data-c="2">Missing wind angles</button></div>
+        </div>
+        <div class="qmfw"><div><b>Question</b>Can machine learning fill gaps in wind-tunnel databases reliably enough for design use?</div><div><b>Method</b>Decision Tree, Random Forest and XGBoost trained on NIST–UWO data to predict eave and ridge displacement and moment coefficients for missing eave heights, roof slopes and wind angles.</div><div><b>Finding</b>R² up to 0.99 for interpolation (missing eave heights and wind angles); lower for roof-slope extrapolation, which the study identified as the limit.</div><div><b>Why it matters</b>Surrogates can cut testing and CFD cost, provided their limits are known before they inform engineering decisions.</div></div>
+        <div class="grid g2" style="align-items:center">
+          <div>
+            <h3 id="mlT" style="font-size:1.15rem"></h3>
+            <p id="mlD" class="muted" style="margin-top:8px"></p>
+            <p style="margin-top:10px;font-size:.9rem"><b>Predicted load effects:</b> maximum and minimum coefficients of eave horizontal displacement, eave moment, ridge vertical displacement and ridge moment of the portal frame.</p>
+            <div class="chips" style="margin-top:14px"><span class="chip">Decision Tree</span><span class="chip">Random Forest</span><span class="chip">XGBoost</span><span class="chip">Hyperparameter tuning</span></div>
+          </div>
+          <svg class="viz" id="mlViz" viewBox="0 0 340 200" role="img" aria-label="Training and prediction split for the selected case with the held-out case highlighted"></svg>
+        </div>
+        <p class="note">Trained on the NIST–UWO aerodynamic database. The models reach R² up to 0.99 for interpolation, with lower accuracy for roof-slope extrapolation; knowing where predictions break down is the evidence needed before AI supports design decisions.</p>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">Finding 4 · Wind and Structures, 2023</div><h3 style="margin-top:6px">Extreme wind climatology of Nepal and northern India</h3></div>
+          <div class="seg" id="ncSeg"><button class="on" data-o="code">Sort by code</button><button data-o="v">Sort by wind speed</button></div>
+        </div>
+        <div class="qmfw"><div><b>Question</b>Nepal's building code adopted its design wind speeds from India without local analysis. Are those values supported by the region's own data?</div><div><b>Method</b>Daily maximum winds at 15 airport stations in Nepal and northern India, corrected for averaging time and terrain, fitted with Type I and Type III (POT) extreme value models, plus a superstation of 435 station-years.</div><div><b>Finding</b>The 47 m/s basic wind speed for Nepal below 3000 m is appropriate, if slightly conservative. No data exist to support 55 m/s above 3000 m, and Type III fits the composite record better.</div><div><b>Why it matters</b>It gave Nepal its first data-based wind climatology. It also showed a 1.5 load factor implies a strength-design MRI of about 260 years, versus 700 years in ASCE 7-22.</div></div>
+        <div style="overflow-x:auto"><svg class="viz" id="ncViz" style="min-width:560px" viewBox="0 0 720 470" role="img" aria-label="Estimated 50-year basic wind speeds at 15 stations compared with codified values"></svg></div>
+        <div class="kv">
+          <div><b>15</b><span>airport stations, Nepal and India</span></div>
+          <div><b>≈44 / ≈41 m/s</b><span>composite 50-yr basic wind speed, Type I / Type III</span></div>
+          <div><b>≈260 yr</b><span>strength MRI implied by a 1.5 wind load factor</span></div>
+        </div>
+        <p class="note">Bars show Type I estimates of the 50-year MRI basic wind speed (3 s gust, 10 m, open terrain) at each station; ticks show the codified value. Nepali stations are highlighted. Composite analysis combined all 15 records into 435 years of annual maxima.</p>
+      </div>
+    </section>
+    <section>
+      <div class="panel">
+        <div class="panel-head">
+          <div><div class="eyebrow">Finding 5 · Journal of Institute of Science and Technology, 2020</div><h3 style="margin-top:6px">Technical resilience of post-earthquake reconstruction in Nepal</h3></div>
+          <a class="mini" href="https://doi.org/10.3126/jist.v25i2.33731" target="_blank" rel="noopener">DOI ↗</a>
+        </div>
+        <div class="qmfw"><div><b>Question</b>Did housing reconstruction in Nuwakot district after the 2015 Gorkha earthquake meet the technical requirements for an earthquake-resilient community?</div><div><b>Method</b>Expert survey of engineers and professionals involved in the reconstruction, evaluated against the Nepal National Building Code and National Reconstruction Authority guidelines: site topography and geology, technical supervision, design and construction, training and capacity building, and use of vulnerable buildings.</div><div><b>Finding</b>Most reconstructed houses were code-compliant and structurally safe, with no major design compromises; mason training and awareness programs were satisfactory, while other technical aspects needed improvement.</div><div><b>Why it matters</b>Lessons for reconstruction policy, including the value of active government supervision, toward building earthquake-resilient communities.</div></div>
+        <div class="kv">
+          <div><b>2015</b><span>Gorkha earthquake, M7.8</span></div>
+          <div><b>63,916</b><span>of 77,462 eligible houses in Nuwakot reconstructed by May 2020</span></div>
+          <div><b>5</b><span>technical aspects of resilience evaluated</span></div>
+        </div>
+        <p class="note">Adhikari, M., Bhattarai, A. R., &amp; Thapa, R. (2020). My first peer-reviewed paper, drawing on post-earthquake field and reconstruction work in Nepal.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="eyebrow">Future research program</div>
+      <h2 class="sec" style="margin-top:8px">Integrating computational and experimental approaches for reliability-based wind design</h2>
+      <p class="muted" style="max-width:72ch;margin:-6px 0 24px;font-size:1.04rem">My long-term goal is to develop the science and tools needed to design and adapt buildings and infrastructure for a changing climate of extremes, combining hazard modeling, structural reliability, laboratory testing and field data in support of performance-based wind engineering.</p>
+      <div class="grid g2 thrusts">
+        <div class="card"><div class="tagrow"><span class="eyebrow">Thrust 1</span><span class="chip k">Computational</span></div><h3>Nonstationary, storm-type-resolved wind hazard for design</h3><p>Hazard models that separate thunderstorm downbursts, extratropical and tropical cyclones, represent their directional structure, and let parameters evolve with climate covariates and projections. Methods combine XIMIS, peaks-over-threshold and superstation analysis with Bayesian nonstationary models, synthetic tropical cyclone datasets and downscaled climate output.</p><p class="q">How will shifts between convective and synoptic events change design wind speeds and directionality factors? How should lifetime exceedance probabilities be defined under a nonstationary hazard?</p></div>
+        <div class="card"><div class="tagrow"><span class="eyebrow">Thrust 2</span><span class="chip k">Computational</span></div><h3>Reliability-consistent design factors for performance-based wind engineering</h3><p>Reliability-based calibration of load factors, directionality factors and acceptance criteria for both strength and serviceability limit states, across building classes rather than a single prototype. Time-dependent reliability over a building’s service life will let design targets account for future hazard, and studies of the dynamic behavior of nominally rigid low-rise and long-span light-frame buildings will test where current code criteria fall short.</p><p class="q">Goal: evidence that informs the next generation of ASCE 7 provisions and performance-based wind design.</p></div>
+        <div class="card"><div class="tagrow"><span class="eyebrow">Thrust 3</span><span class="chip k">Experimental</span></div><h3>Experimental validation of computational predictions</h3><p>Applying wind-induced structural demands, derived from aerodynamic databases and computational models, as equivalent loads to laboratory specimens, and comparing measured response with predictions to improve understanding of dynamic behavior. Longer term: developing specialized wind-loading capabilities alongside structural testing facilities, and building light-frame wood specimens to extend the work beyond steel low-rise systems.</p><p class="q">Builds on hands-on experience in RPI’s hydraulics, structural and wind tunnel laboratories.</p></div>
+        <div class="card"><div class="tagrow"><span class="eyebrow">Thrust 4</span><span class="chip k">Field data</span></div><h3>Field-calibrated directional reliability</h3><p>Calibrating directionality and reliability parameters, currently derived largely from climatology, against observed building performance. Emerging methods for estimating near-surface wind speed and direction from post-disaster damage surveys and imagery provide directional wind information, and observer-level uncertainty in field damage assessments will be treated explicitly.</p><p class="q">Draws on my post-earthquake damage assessments in Nepal after the 2015 Gorkha earthquake.</p></div>
+        <div class="card" style="grid-column:1/-1"><div class="tagrow"><span class="eyebrow">Thrust 5</span><span class="chip k">Computational</span><span class="chip k">Multi-hazard</span></div><h3>Compound extremes and regional resilience with physics-informed surrogates</h3><p>Hurricanes combine wind, rain intrusion and surge; convective storms bring wind, hail and flash flooding. I will develop machine learning surrogates constrained by aerodynamics and structural mechanics, trained on wind tunnel, CFD and field data, that plug into Monte Carlo and multi-hazard risk frameworks at regional scale. Applications include community loss and recovery under compound events, prioritizing retrofit and adaptation investments, extending the framework to multiple structural systems and toward combined wind and seismic risk, and transferring hazard and fragility knowledge to data-scarce regions such as Nepal and the wider Global South through superstation methods and transfer learning.</p></div>
+      </div>
+      <div class="card" style="margin-top:18px;background:var(--steel-soft);border-color:transparent">
+        <h3>Applications in practice</h3>
+        <p style="color:var(--fg)">The same probabilistic analysis, hazard modeling and computational methods apply directly to infrastructure risk and energy-sector projects, catastrophe modeling, and risk-informed design and retrofit decisions in industry.</p>
+      </div>
+      <p class="note" style="margin-top:16px">Planned funding: NSF CAREER and CMMI, NIST National Windstorm Impact Reduction Program and disaster resilience programs, NOAA, and industry and insurance partners, with experimental validation at NSF NHERI facilities.</p>
+    </section>
+  </div>
+</div>
+
+<!-- ================= PUBLICATIONS ================= -->
+<div class="page" id="p-publications">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Publications</div>
+      <h2 class="ph">Papers, talks and the dissertation</h2>
+      <p>Full list with DOIs. Citation counts and the latest entries are on <a href="https://scholar.google.com/citations?user=ia4XW-YAAAAJ" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </div>
+    <div class="toolbar">
+      <div class="search"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--muted)"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="pubQ" type="search" placeholder="Search titles, venues, keywords" aria-label="Search publications"></div>
+      <div class="seg" id="pubSeg"><button class="on" data-f="all">All</button><button data-f="journal">Journal</button><button data-f="review">Under review</button><button data-f="conf">Conference</button><button data-f="thesis">Dissertation</button></div>
+    </div>
+    <div id="pubList"></div>
+  </div>
+</div>
+
+<!-- ================= EXPERIENCE ================= -->
+<div class="page" id="p-experience">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Experience</div>
+      <h2 class="ph">Research, teaching and professional practice</h2>
+      <p>Design practice and disaster reconnaissance in Nepal, doctoral research in the U.S., and now postdoctoral research at Auburn.</p>
+    </div>
+    <div class="grid" style="grid-template-columns:minmax(0,1.3fr) minmax(0,.7fr);gap:48px" id="expGrid">
+      <div class="tl" id="timeline"></div>
+      <aside>
+        <h2 class="sec" style="font-size:1.4rem">Education</h2>
+        <div class="card" style="padding:20px">
+          <div class="mono muted" style="font-size:.8rem">2026 · conferral Dec 2026</div><h3 style="font-size:1.05rem;margin-top:4px">Ph.D., Civil Engineering</h3><p>Rensselaer Polytechnic Institute, Troy, NY. Advisor: Prof. Chris Letchford. Committee: D. Lander, M. Li, M.Z. Naser.</p>
+          <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+          <div class="mono muted" style="font-size:.8rem">2025</div><h3 style="font-size:1.05rem;margin-top:4px">M.Eng., Civil Engineering</h3><p>Rensselaer Polytechnic Institute</p>
+          <hr style="border:0;border-top:1px solid var(--line);margin:16px 0">
+          <div class="mono muted" style="font-size:.8rem">2015</div><h3 style="font-size:1.05rem;margin-top:4px">B.E., Civil Engineering</h3><p>Tribhuvan University, Nepal</p>
+        </div>
+        <h2 class="sec" style="font-size:1.4rem;margin-top:36px">Toolkit</h2>
+        <div id="skills"></div>
+      </aside>
+    </div>
+    <section hidden id="gallerySec">
+      <h2 class="sec">In the field and the lab</h2>
+      <div class="gallery" id="gallery"></div>
+      
+    </section>
+  </div>
+</div>
+
+<!-- ================= TEACHING ================= -->
+<div class="page" id="p-teaching">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Teaching</div>
+      <h2 class="ph">Teaching experience and interests</h2>
+      <p>From 2021 to 2026 I served as a teaching assistant at Rensselaer Polytechnic Institute for four undergraduate courses, carrying the same core responsibilities in each.</p>
+    </div>
+    <section>
+      <h2 class="sec">Responsibilities in every course</h2>
+      <div class="grid g3">
+        <div class="card"><h3>Recitations</h3><p>Led problem-solving recitation sessions independently.</p></div>
+        <div class="card"><h3>Laboratory supervision</h3><p>Ran and supervised laboratory sessions, guiding students through experiments and software exercises.</p></div>
+        <div class="card"><h3>Office hours &amp; mentoring</h3><p>Held regular office hours and mentored students on coursework and design projects.</p></div>
+        <div class="card"><h3>Grading</h3><p>Graded homework assignments and examinations, with feedback to students.</p></div>
+        <div class="card"><h3>Exam proctoring</h3><p>Proctored examinations and supported exam preparation.</p></div>
+        <div class="card"><h3>Instructional support</h3><p>Helped develop instructional materials and delivered lectures when needed.</p></div>
+      </div>
+    </section>
+    <section>
+      <h2 class="sec">Courses</h2>
+      <div class="grid g2">
+        <div class="card lift"><div class="ico"><svg><use href="#i-frame"/></svg></div><h3>Structural Analysis</h3><p>Undergraduate course · all core duties, plus SAP2000 instruction for structural modeling and analysis.</p></div>
+        <div class="card lift"><div class="ico"><svg><use href="#i-globe"/></svg></div><h3>Applied Hydrology and Design</h3><p>Undergraduate course · all core duties, plus HEC-HMS instruction for hydrologic modeling.</p></div>
+        <div class="card lift"><div class="ico"><svg><use href="#i-wind"/></svg></div><h3>Fluid Mechanics</h3><p>Undergraduate course · all core duties, including laboratory supervision.</p></div>
+        <div class="card lift"><div class="ico"><svg><use href="#i-book"/></svg></div><h3>Engineering Design</h3><p>Undergraduate course · all core duties, including mentoring student design teams.</p></div>
+      </div>
+    </section>
+    <section>
+      <h2 class="sec">Teaching interests</h2>
+      <div class="grid g2">
+        <div class="card"><h3>Undergraduate</h3><div class="chips" style="margin-top:12px"><span class="chip">Structural Analysis</span><span class="chip">Mechanics of Materials</span><span class="chip">Steel Design</span><span class="chip">Concrete Design</span><span class="chip">Timber &amp; Masonry Design</span><span class="chip">Structural Dynamics</span><span class="chip">Probability &amp; Statistics for Engineers</span><span class="chip">Fluid Mechanics</span><span class="chip">Hydraulics &amp; Hydrology</span></div></div>
+        <div class="card"><h3>Graduate and new courses</h3><div class="chips" style="margin-top:12px"><span class="chip">Wind Engineering</span><span class="chip">Structural Reliability &amp; Risk</span><span class="chip">Earthquake Engineering</span><span class="chip">Infrastructure Under Extreme Events</span><span class="chip">Machine Learning for Infrastructure Decisions</span></div></div>
+      </div>
+      <div class="card" style="margin-top:18px;background:var(--steel-soft);border-color:transparent">
+        <p style="color:var(--fg);font-size:1.05rem;max-width:72ch">As a first-generation international graduate student, I want my classroom and research group to welcome students from every background, and to train them in both mechanics and data science.</p>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ================= SERVICE ================= -->
+<div class="page" id="p-service">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Service &amp; community</div>
+      <h2 class="ph">Peer review, conferences and professional societies</h2>
+      <p>Contributing to the wind and structural engineering community as a reviewer, speaker and member.</p>
+    </div>
+    <section>
+      <h2 class="sec">Journal peer review · 4 manuscripts</h2><div class="card" style="margin-bottom:20px">
+        <div class="eyebrow">As listed on my CV</div>
+        <table style="width:100%;border-collapse:collapse;margin-top:12px;font-size:.95rem">
+          <tr style="border-bottom:1px solid var(--line)"><td style="padding:10px 0"><b>Journal of Structural Engineering</b> (ASCE)</td><td class="mono" style="text-align:right;padding:10px 0;white-space:nowrap">3 manuscripts · 2026</td></tr>
+          <tr><td style="padding:10px 0"><b>Wind and Structures</b> (Techno-Press)</td><td class="mono" style="text-align:right;padding:10px 0;white-space:nowrap">1 manuscript · 2026</td></tr>
+        </table>
+        <p class="note">Manuscript titles are confidential; review topics are shown below.</p>
+      </div>
+      <div class="grid g2" id="reviews"></div>
+    </section>
+    <section>
+      <h2 class="sec">Conference presentations</h2>
+      <div class="tl" id="confs"></div>
+    </section>
+    <section>
+      <h2 class="sec">Professional memberships</h2>
+      <div class="grid g3">
+        <div class="card"><h3>ASCE</h3><p>American Society of Civil Engineers</p></div>
+        <div class="card"><h3>NEC</h3><p>Nepal Engineering Council</p></div>
+        <div class="card"><h3>NEA</h3><p>Nepal Engineers' Association</p></div>
+      </div>
+      </section>
+    <section>
+      <h2 class="sec">Continuing education &amp; languages</h2>
+      <div class="grid g2">
+        <div class="card"><h3>Online courses</h3><p>Applications in Engineering Mechanics, Georgia Institute of Technology (Coursera), 2019</p><p style="margin-top:8px">Mechanics of Materials IV: Deflections, Buckling, Combined Loading &amp; Failure Theories, Georgia Institute of Technology (Coursera), 2019</p></div>
+        <div class="card"><h3>Languages</h3><div class="chips" style="margin-top:10px"><span class="chip">English</span><span class="chip">Nepali</span><span class="chip">Hindi</span></div></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ================= CONTACT ================= -->
+<div class="page" id="p-contact">
+  <div class="wrap">
+    <div class="page-head">
+      <div class="eyebrow">Contact</div>
+      <h2 class="ph">Contact</h2>
+      <p>I welcome inquiries about faculty and research positions, research collaborations and invited talks.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="card cc"><div class="ico"><svg><use href="#i-mail"/></svg></div><div style="min-width:0"><div class="k">Email</div><div class="v">manozadhikari28@gmail.com</div><button class="mini" style="margin-top:8px" data-copy="manozadhikari28@gmail.com"><svg width="12" height="12"><use href="#i-copy"/></svg> Copy</button></div></div>
+      <div class="card cc"><div class="ico"><svg><use href="#i-mail"/></svg></div><div style="min-width:0"><div class="k">Auburn email</div><div class="v">maa0186@auburn.edu</div><button class="mini" style="margin-top:8px" data-copy="maa0186@auburn.edu"><svg width="12" height="12"><use href="#i-copy"/></svg> Copy</button></div></div>
+      <div class="card cc"><div class="ico"><svg><use href="#i-phone"/></svg></div><div style="min-width:0"><div class="k">Phone</div><div class="v">+1 518-960-7651</div><button class="mini" style="margin-top:8px" data-copy="+1 518-960-7651"><svg width="12" height="12"><use href="#i-copy"/></svg> Copy</button></div></div>
+      <div class="card cc"><div class="ico"><svg><use href="#i-pin"/></svg></div><div style="min-width:0"><div class="k">Location</div><div class="v">Dept. of Civil &amp; Environmental Engineering, Auburn University, Auburn, AL</div></div></div>
+      <a class="card cc lift" style="text-decoration:none" href="https://scholar.google.com/citations?user=ia4XW-YAAAAJ" target="_blank" rel="noopener"><div class="ico"><svg><use href="#i-scholar"/></svg></div><div style="min-width:0"><div class="k">Google Scholar</div><div class="v">citations?user=ia4XW-YAAAAJ</div></div></a>
+      <a class="card cc lift" style="text-decoration:none" href="https://www.linkedin.com/in/manoj-adhikari-b71523110/" target="_blank" rel="noopener"><div class="ico"><svg><use href="#i-linkedin"/></svg></div><div style="min-width:0"><div class="k">LinkedIn</div><div class="v">in/manoj-adhikari-b71523110</div></div></a>
+      <a class="card cc lift" style="text-decoration:none" href="https://orcid.org/0000-0003-0730-2709" target="_blank" rel="noopener"><div class="ico"><svg><use href="#i-orcid"/></svg></div><div style="min-width:0"><div class="k">ORCID</div><div class="v">0000-0003-0730-2709</div></div></a>
+      <a class="card cc lift" style="text-decoration:none" href="https://www.researchgate.net/profile/Manoj-Adhikari-5" target="_blank" rel="noopener"><div class="ico"><svg><use href="#i-rg"/></svg></div><div style="min-width:0"><div class="k">ResearchGate</div><div class="v">profile/Manoj-Adhikari-5</div></div></a>
+    </div>
+
+    <section>
+      <div class="card" style="max-width:760px">
+        <h3>Positions of interest</h3>
+        <ul style="margin:12px 0 0;padding-left:18px;color:var(--muted)">
+          <li>Tenure-track faculty positions in structural, wind and infrastructure resilience engineering</li>
+          <li>Research roles in industry and national laboratories: infrastructure risk, catastrophe modeling and multi-hazard resilience</li>
+        </ul>
+        <a class="btn" style="margin-top:20px" href="Manoj_Adhikari_CV.pdf" target="_blank" rel="noopener"><svg><use href="#i-doc"/></svg> Curriculum vitae (PDF)</a>
+      </div>
+    </section>
+  </div>
+</div>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Manoj Adhikari · Last updated October 2026</span><span>Department of Civil and Environmental Engineering, Auburn University</span></div></footer>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+(function(){
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>t.classList.remove('on'),2200)}
+function copy(text,msg){
+  const done=()=>toast(msg||'Copied');
+  try{navigator.clipboard.writeText(text).then(done,()=>fallback())}catch(e){fallback()}
+  function fallback(){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done()}catch(e){toast('Select and copy: '+text)}ta.remove()}
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-copy]');if(b)copy(b.dataset.copy,'Copied '+b.dataset.copy)});
+
+/* ---------- theme ---------- */
+const root=document.documentElement;
+function curDark(){const t=root.dataset.theme;return t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches}
+function setIcon(){$('#themeBtn use').setAttribute('href',curDark()?'#i-sun':'#i-moon')}
+try{const s=localStorage.getItem('ma-theme');if(s)root.dataset.theme=s}catch(e){}
+setIcon();
+$('#themeBtn').onclick=()=>{root.dataset.theme=curDark()?'light':'dark';try{localStorage.setItem('ma-theme',root.dataset.theme)}catch(e){}setIcon();redrawAll()};
+matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change',()=>{setIcon();redrawAll()});
+
+/* ---------- router ---------- */
+const pages=['home','cv','research','publications','experience','teaching','service','contact'];
+function route(){
+  let h=(location.hash||'#home').slice(1); if(!pages.includes(h)) h='home';
+  pages.forEach(p=>$('#p-'+p).classList.toggle('show',p===h));
+  $$('nav.links a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+h));
+  $('#navLinks').classList.remove('open');
+  window.scrollTo({top:0,behavior:'instant'in window?'instant':'auto'});
+  if(h==='home'){countUp();}
+  requestAnimationFrame(redrawAll);
+}
+window.addEventListener('hashchange',route);
+$('#menuBtn').onclick=()=>$('#navLinks').classList.toggle('open');
+window.addEventListener('scroll',()=>{const d=document.documentElement;const p=d.scrollTop/(d.scrollHeight-d.clientHeight||1);$('#prog').style.width=(p*100)+'%'},{passive:true});
+
+/* ---------- typed roles ---------- */
+const roles_unused=['Wind engineer.','Structural reliability researcher.','Machine learning for structures.','Extreme value analyst.','Former design engineer, Nepal.','Future faculty colleague.'];
+(function type(){const el=$('#typed');if(!el)return;if(reduce){el.textContent=roles[0];return}let i=0,j=0,del=false;
+  (function tick(){const w=roles[i];el.textContent=w.slice(0,j);
+    if(!del&&j<w.length){j++;setTimeout(tick,55)}else if(!del){del=true;setTimeout(tick,1600)}
+    else if(j>0){j--;setTimeout(tick,25)}else{del=false;i=(i+1)%roles.length;setTimeout(tick,300)}})()})();
+
+/* ---------- count up ---------- */
+function countUp(){$$('[data-count]').forEach(el=>{const t=+el.dataset.count;if(reduce){el.textContent=t;return}let s=null;
+  const step=ts=>{s=s||ts;const k=Math.min(1,(ts-s)/900);el.textContent=Math.round(t*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)})}
+
+/* ---------- marquee ---------- */
+const mqItems=['XIMIS','de Haan / GPD','Superstation approach','NIST aerodynamic database','Monte Carlo simulation','Reliability index β','ASCE 7-22','LRFD','PSD analysis','SAP2000','OpenSeesPy','XGBoost','Random Forest','CNN / ANN','Fragility curves','Performance-based wind design','Post-earthquake reconnaissance'];
+if($('#mq'))$('#mq').innerHTML=[...mqItems,...mqItems].map(t=>`<span>${t}</span>`).join('');
+
+/* ---------- photo slots ---------- */
+function bindSlot(slot){const inp=$('input',slot);if(!inp)return;inp.addEventListener('change',()=>{const f=inp.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{let img=$('img',slot);if(!img){img=document.createElement('img');slot.appendChild(img)}img.src=r.result;img.alt='Preview';};r.readAsDataURL(f)})}
+const gal=[['Wind tunnel / lab','At a boundary-layer wind tunnel or the structures lab'],['Conference talk','Presenting at ICWE16, Florence, 2023'],['Field reconnaissance','Post-earthquake damage survey, Nepal, 2015'],['Teaching','Leading a recitation or SAP2000 lab at RPI'],['Auburn','With the Auburn wind engineering group'],['Design practice','On site during construction, Nepal']];
+$('#gallery').innerHTML=gal.map(([t,c])=>`<figure><label class="photo-slot"><input type="file" accept="image/*"><div class="ph"><svg><use href="#i-cam"/></svg><b>${t.toUpperCase()}</b><span>Click to preview</span></div></label><figcaption>${c}</figcaption></figure>`).join('');
+$$('.photo-slot').forEach(bindSlot);
+
+/* ---------- SVG helpers ---------- */
+const NS='http://www.w3.org/2000/svg';
+function el(t,a,txt){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;return e}
+
+/* ---------- HERO: directionality panel ---------- */
+(function(){
+ const rose=$('#wxRose'),resp=$('#wxResp'),frame=$('#wxFrame');if(!rose)return;
+ const D=d=>{d=((d%360)+360)%360;return d>180?360-d:d};
+ // illustrative directional extreme wind speed (m/s) and response coefficient
+ const V=t=>30+13*Math.exp(-((D(t-300)/38)**2))+9*Math.exp(-((D(t-200)/26)**2))+3*Math.cos((t-40)*Math.PI/180);
+ const C=t=>{const c=Math.abs(Math.cos(t*Math.PI/180));return 0.30+0.70*Math.pow(c,1.4)*(t>90&&t<270?1:0.9)};
+ const N=72,th=[...Array(N)].map((_,i)=>i*5);
+ const Vs=th.map(V),Cs=th.map(C),Vmax=Math.max(...Vs),Cmax=Math.max(...Cs);
+ const Rn=th.map((t,i)=>(Vs[i]/Vmax)**2*Cs[i]/Cmax);
+ const iV=Vs.indexOf(Vmax),iR=Rn.indexOf(Math.max(...Rn)),KD=Math.max(...Rn);
+ let ang=270,playing=!reduce,dyn=0,t0=performance.now(),drag=false;
+ const col=()=>({fg:css('--fg'),mu:css('--muted'),ln:css('--line'),ac:css('--accent'),fr:css('--frame'),st:css('--steel'),ss:css('--steel-soft'),as:css('--accent-soft'),sf:css('--surface')});
+ // ---- static layers
+ let roseDyn,respDyn,frameDyn;
+ function buildRose(){rose.innerHTML='';const c=col(),cx=150,cy=150,r0=34,r1=128,sc=v=>r0+(v-24)/(Vmax-24)*(r1-r0);
+  [0.33,0.66,1].forEach(f=>rose.append(el('circle',{cx,cy,r:r0+(r1-r0)*f,fill:'none',stroke:c.ln,'stroke-dasharray':'2 3'})));
+  [['N',0],['E',90],['S',180],['W',270]].forEach(([n,a])=>{const x=cx+Math.sin(a*Math.PI/180)*(r1+12),y=cy-Math.cos(a*Math.PI/180)*(r1+12)+4;rose.append(el('text',{x,y,'text-anchor':'middle',class:'lbl'},n))});
+  for(let i=0;i<36;i++){const a0=(i*10-5)*Math.PI/180,a1=(i*10+5)*Math.PI/180,r=sc(V(i*10));
+   const p=`M${cx+Math.sin(a0)*r0} ${cy-Math.cos(a0)*r0} L${cx+Math.sin(a0)*r} ${cy-Math.cos(a0)*r} A${r} ${r} 0 0 1 ${cx+Math.sin(a1)*r} ${cy-Math.cos(a1)*r} L${cx+Math.sin(a1)*r0} ${cy-Math.cos(a1)*r0} A${r0} ${r0} 0 0 0 ${cx+Math.sin(a0)*r0} ${cy-Math.cos(a0)*r0}Z`;
+   rose.append(el('path',{d:p,fill:c.ss,stroke:c.st,'stroke-width':.6,'data-i':i}))}
+  // building plan, ridge E-W
+  rose.append(el('rect',{x:cx-22,y:cy-13,width:44,height:26,fill:c.sf,stroke:c.fg,'stroke-width':1.6,rx:1}));
+  rose.append(el('line',{x1:cx-22,x2:cx+22,y1:cy,y2:cy,stroke:c.fg,'stroke-dasharray':'3 2'}));
+  rose.append(el('line',{x1:cx,x2:cx,y1:cy-13,y2:cy+13,stroke:c.fr,'stroke-width':3,'stroke-linecap':'round'}));
+  rose.append(el('text',{x:cx+5,y:cy-17,'text-anchor':'start',style:'fill:'+c.fr+';font-size:9px'},'frame'));
+  roseDyn=el('g');rose.append(roseDyn);}
+ function buildResp(){resp.innerHTML='';const c=col(),x0=40,x1=405,y0=215,y1=22,X=t=>x0+t/360*(x1-x0),Y=v=>y0-v*(y0-y1);
+  [0,.5,1].forEach(v=>{resp.append(el('line',{x1:x0,x2:x1,y1:Y(v),y2:Y(v),stroke:c.ln,'stroke-dasharray':v?'2 3':''}));resp.append(el('text',{x:x0-6,y:Y(v)+4,'text-anchor':'end'},v.toFixed(1)))});
+  [['N',0],['E',90],['S',180],['W',270],['N',360]].forEach(([n,a])=>resp.append(el('text',{x:X(a),y:y0+16,'text-anchor':'middle'},n)));
+  resp.append(el('text',{x:x1,y:y0+32,'text-anchor':'end'},'wind direction (from)'));resp.append(el('text',{x:x0-30,y:y1-10,'text-anchor':'start'},'normalized (no units)'));
+  const path=arr=>arr.map((v,i)=>(i?'L':'M')+X(th[i]).toFixed(1)+' '+Y(v).toFixed(1)).join(' ')+` L${X(360)} ${Y(arr[0])}`;
+  resp.append(el('path',{d:path(Vs.map(v=>(v/Vmax)**2)),fill:'none',stroke:c.st,'stroke-width':1.6,'stroke-dasharray':'5 4'}));
+  resp.append(el('path',{d:path(Rn),fill:'none',stroke:c.ac,'stroke-width':2.4}));
+  // maxima markers
+  resp.append(el('circle',{cx:X(th[iV]),cy:Y(1),r:4,fill:c.st}));resp.append(el('text',{x:X(th[iV]),y:Y(1)-8,'text-anchor':'middle',style:'fill:'+c.st},'max wind'));
+  resp.append(el('circle',{cx:X(th[iR]),cy:Y(Rn[iR]),r:4,fill:c.ac}));resp.append(el('text',{x:X(th[iR]),y:Y(Rn[iR])-8,'text-anchor':'middle',style:'fill:'+c.ac},'max response'));
+  // legend
+  resp.append(el('line',{x1:x0+4,x2:x0+26,y1:y0+52,y2:y0+52,stroke:c.st,'stroke-width':1.6,'stroke-dasharray':'5 4'}));resp.append(el('text',{x:x0+30,y:y0+56,'text-anchor':'start'},'wind pressure alone'));
+  resp.append(el('line',{x1:x0+160,x2:x0+182,y1:y0+52,y2:y0+52,stroke:c.ac,'stroke-width':2.4}));resp.append(el('text',{x:x0+186,y:y0+56,'text-anchor':'start'},'structural response'));
+  respDyn=el('g');resp.append(respDyn);resp.setAttribute('viewBox','0 0 420 280');}
+ function buildFrame(){frame.innerHTML='';frameDyn=el('g');frame.append(frameDyn);}
+ function build(){buildRose();buildResp();buildFrame();}
+ // ---- dynamic draw
+ function draw(now){const c=col(),cx=150,cy=150;const t=((ang%360)+360)%360,v=V(t),cf=C(t),rn=(v/Vmax)**2*cf/Cmax;
+  // rose: highlight + arrow
+  $$('path[data-i]',rose).forEach(p=>{const on=+p.dataset.i===Math.round(t/10)%36;p.setAttribute('fill',on?c.as:c.ss);p.setAttribute('stroke',on?c.ac:c.st)});
+  roseDyn.innerHTML='';const a=t*Math.PI/180,ux=Math.sin(a),uy=-Math.cos(a);
+  const ax=cx+ux*146,ay=cy+uy*146,bx=cx+ux*40,by=cy+uy*40;
+  roseDyn.append(el('line',{x1:ax,y1:ay,x2:bx,y2:by,stroke:c.ac,'stroke-width':3,'stroke-linecap':'round'}));
+  const hx=-ux,hy=-uy,px=-hy,py=hx;roseDyn.append(el('path',{d:`M${bx} ${by} L${bx-hx*10+px*6} ${by-hy*10+py*6} L${bx-hx*10-px*6} ${by-hy*10-py*6}Z`,fill:c.ac}));
+  // response cursor
+  respDyn.innerHTML='';const x0=40,x1=405,y0=215,y1=22,X=q=>x0+q/360*(x1-x0),Y=q=>y0-q*(y0-y1);
+  respDyn.append(el('line',{x1:X(t),x2:X(t),y1:y1-6,y2:y0,stroke:c.fg,'stroke-width':1,opacity:.5}));
+  respDyn.append(el('circle',{cx:X(t),cy:Y(rn),r:5,fill:c.sf,stroke:c.ac,'stroke-width':2}));
+  // frame: elevation, wind component normal to frame plane (frames span N-S)
+  const tt=(now-t0)/1000,gust=0.10*Math.sin(tt*2.1)+0.06*Math.sin(tt*5.3+1),osc=dyn?0.32*Math.sin(tt*2*Math.PI*1.35*0.6):0;
+  const sgn=Math.cos(a)>=0?1:-1;// elevation: N on left, S on right; wind from N pushes left->right
+  const amp=rn*(1+gust)*(1+(dyn?0.25:0))+(dyn?osc*rn:0);const dx=sgn*amp*16;
+  frameDyn.innerHTML='';const L=40,Rr=220,B=200,E=110,A=70;
+  frameDyn.append(el('line',{x1:20,x2:240,y1:B,y2:B,stroke:c.mu,'stroke-width':1.5}));
+  for(let k=0;k<6;k++)frameDyn.append(el('line',{x1:28+k*40,x2:20+k*40,y1:B,y2:B+8,stroke:c.mu}));
+  frameDyn.append(el('text',{x:L,y:B+24,'text-anchor':'middle'},'N'));frameDyn.append(el('text',{x:Rr,y:B+24,'text-anchor':'middle'},'S'));
+  frameDyn.append(el('path',{d:`M${L} ${B} L${L} ${E} L130 ${A} L${Rr} ${E} L${Rr} ${B}`,fill:'none',stroke:c.ln,'stroke-width':2,'stroke-dasharray':'4 3'}));
+  const eL=L+dx,eR=Rr+dx,ap=130+dx*0.95;
+  frameDyn.append(el('path',{d:`M${L} ${B} Q${L} ${(B+E)/2+10} ${eL} ${E} L${ap} ${A} L${eR} ${E} Q${Rr} ${(B+E)/2+10} ${Rr} ${B}`,fill:'none',stroke:c.fr,'stroke-width':3.2,'stroke-linejoin':'round'}));
+  const len=10+rn*26*(1+gust);
+  for(let k=0;k<4;k++){const y=E+14+k*20,f=(B-y)/(B-E),wallX=(sgn>0?L:Rr)+dx*f*f;
+   const xe=wallX-sgn*3,xs=xe-sgn*len;
+   frameDyn.append(el('line',{x1:xs,x2:xe-sgn*5,y1:y,y2:y,stroke:c.ac,'stroke-width':2}));
+   frameDyn.append(el('path',{d:`M${xe} ${y} L${xe-sgn*7} ${y-4} L${xe-sgn*7} ${y+4}Z`,fill:c.ac}));}
+  frameDyn.append(el('text',{x:130,y:24,'text-anchor':'middle',class:'lbl'},dyn?'Dynamic response':'Static response'));
+  frameDyn.append(el('text',{x:130,y:40,'text-anchor':'middle'},'deflection exaggerated'));
+  // readout
+  const drift=amp/(1.15);
+  $('#wxRead').innerHTML=`<div>Wind from<b>${String(Math.round(t/5)*5%360).padStart(3,'0')}°</b></div><div>Wind speed<b>${v.toFixed(1)} m/s</b></div><div>Response ÷ worst case<b class="acc">${rn.toFixed(2)}</b></div><div>K<sub>d</sub> = peak response ÷ worst case<b>${KD.toFixed(2)}</b></div>`;
+ }
+ function loop(now){if(playing&&!drag)ang=(ang+0.25)%360;draw(now);if(!reduce)requestAnimationFrame(loop)}
+ function setFrom(e){const r=rose.getBoundingClientRect(),x=e.clientX-(r.left+r.width/2),y=e.clientY-(r.top+r.height/2);ang=(Math.atan2(x,-y)*180/Math.PI+360)%360;if(reduce)draw(performance.now())}
+ rose.addEventListener('pointerdown',e=>{drag=true;rose.setPointerCapture(e.pointerId);setFrom(e)});
+ rose.addEventListener('pointermove',e=>{if(drag)setFrom(e)});
+ rose.addEventListener('pointerup',()=>drag=false);
+ $('#wxPlay').onclick=e=>{playing=!playing;e.target.textContent=playing?'Pause':'Play';e.target.setAttribute('aria-pressed',playing);if(reduce)draw(performance.now())};
+ $$('#wxDyn button').forEach(b=>b.onclick=()=>{$$('#wxDyn button').forEach(x=>x.classList.toggle('on',x===b));dyn=+b.dataset.d;if(reduce)draw(performance.now())});
+ if(reduce){playing=false;$('#wxPlay').textContent='Play'}
+ window.__wxRebuild=()=>{build();draw(performance.now())};
+ build();draw(performance.now());if(!reduce)requestAnimationFrame(loop);
+})();
+
+/* Kd range */
+function drawKd(){const s=$('#kdViz');s.innerHTML='';const x0=40,x1=690,lo=0.4,hi=1.0,X=v=>x0+(v-lo)/(hi-lo)*(x1-x0);
+  const fg=css('--fg'),acc=css('--accent'),st=css('--steel'),line=css('--line'),soft=css('--steel-soft'),asoft=css('--accent-soft');
+  s.append(el('line',{x1:x0,x2:x1,y1:100,y2:100,stroke:line,'stroke-width':1}));
+  for(let v=0.4;v<=1.0001;v+=0.1){s.append(el('line',{x1:X(v),x2:X(v),y1:100,y2:106,stroke:line}));s.append(el('text',{x:X(v),y:122,'text-anchor':'middle'},v.toFixed(1)))}
+  s.append(el('text',{x:x1,y:142,'text-anchor':'end'},'wind directionality factor Kd'));
+  const band=el('rect',{x:X(0.47),y:58,width:0,height:30,rx:5,fill:soft,stroke:st,'stroke-width':1});s.append(band);
+  const over=el('rect',{x:X(0.85),y:58,width:X(0.95)-X(0.85),height:30,fill:asoft,opacity:.9});s.append(over);
+  s.append(el('rect',{x:X(0.47),y:58,width:X(0.95)-X(0.47),height:30,rx:5,fill:'none',stroke:st,'stroke-width':1.2}));
+  s.append(el('text',{x:X(0.47),y:50,'text-anchor':'start',class:'lbl'},'0.47'));
+  s.append(el('text',{x:X(0.95),y:50,'text-anchor':'end',class:'lbl'},'0.95'));
+  s.append(el('line',{x1:X(0.72),x2:X(0.72),y1:54,y2:92,stroke:st,'stroke-width':3}));
+  s.append(el('text',{x:X(0.72),y:22,'text-anchor':'middle',class:'lbl'},'mean 0.72'));
+  s.append(el('line',{x1:X(0.72),x2:X(0.72),y1:27,y2:54,stroke:st,'stroke-dasharray':'2 3'}));
+  s.append(el('line',{x1:X(0.85),x2:X(0.85),y1:30,y2:100,stroke:acc,'stroke-width':2}));
+  s.append(el('text',{x:X(0.85)+6,y:38,'text-anchor':'start',fill:acc,style:'fill:'+acc},'ASCE 7-22: 0.85'));
+  s.append(el('text',{x:(X(0.85)+X(0.95))/2,y:78,'text-anchor':'middle',style:'fill:'+acc},'≈19%'));
+  if(!reduce){band.animate([{width:0},{width:X(0.95)-X(0.47)}],{duration:900,easing:'cubic-bezier(.2,.7,.2,1)',fill:'forwards'})}else band.setAttribute('width',X(0.95)-X(0.47));
+}
+/* site map */
+const SITES=[['Portland, OR',95,70],['Phoenix, AZ',190,205],['Minneapolis, MN',430,80],['Dallas–Fort Worth, TX',375,215],['Memphis, TN',490,175],['Buffalo, NY',615,90]];
+let siteOn=2;
+function drawMap(){const s=$('#mapViz');s.innerHTML='';const st=css('--steel'),acc=css('--accent'),line=css('--line'),sf=css('--surface-2'),fg=css('--fg');
+  // simplified contiguous-US silhouette (schematic)
+  s.append(el('path',{d:'M60 40 L250 30 L420 45 L520 55 L600 50 L670 40 L690 70 L660 110 L640 150 L600 180 L590 225 L560 250 L520 235 L470 250 L430 285 L380 270 L330 240 L260 245 L200 230 L120 200 L70 150 L55 95 Z',fill:sf,stroke:line,'stroke-width':1.2}));
+  SITES.forEach(([n,x,y],i)=>{const on=i===siteOn;const g=el('g',{style:'cursor:pointer'});
+    if(on){const ring=el('circle',{cx:x,cy:y,r:9,fill:'none',stroke:acc,'stroke-width':2});g.append(ring);if(!reduce)ring.animate([{r:9,opacity:1},{r:24,opacity:0}],{duration:1400,iterations:Infinity})}
+    g.append(el('circle',{cx:x,cy:y,r:on?7:5,fill:on?acc:st}));
+    const L=x>600||n.startsWith('Minn');const t=el('text',{x:x+(L?-12:12),y:y+4,'text-anchor':L?'end':'start',class:on?'lbl':''},n);g.append(t);
+    g.addEventListener('click',()=>{siteOn=i;drawMap();drawSites()});s.append(g)});
+  s.append(el('text',{x:700,y:292,'text-anchor':'end'},'schematic, not to scale'));
+}
+function drawSites(){$('#sites').innerHTML=SITES.map(([n],i)=>`<button class="${i===siteOn?'on':''}" data-i="${i}">${n}</button>`).join('');$$('#sites button').forEach(b=>b.onclick=()=>{siteOn=+b.dataset.i;drawMap();drawSites()})}
+
+/* reliability normal curve */
+let beta=2.56,betaShown=2.56;
+function Phi(x){// standard normal CDF via erf approximation (Abramowitz-Stegun 7.1.26)
+  const t=1/(1+0.3275911*Math.abs(x)/Math.SQRT2);const y=1-(((((1.061405429*t-1.453152027)*t)+1.421413741)*t-0.284496736)*t+0.254829592)*t*Math.exp(-x*x/2);return x>=0?(1+y)/2:(1-y)/2}
+function drawRel(b){const s=$('#relViz');s.innerHTML='';const x0=40,x1=690,y0=190,top=20,lo=-4,hi=4,X=v=>x0+(v-lo)/(hi-lo)*(x1-x0),pdf=z=>Math.exp(-z*z/2)/Math.sqrt(2*Math.PI),Y=p=>y0-p/0.4*(y0-top);
+  const st=css('--steel'),acc=css('--accent'),line=css('--line'),soft=css('--steel-soft');
+  let d='M'+X(lo)+' '+y0;for(let z=lo;z<=hi;z+=0.05)d+=' L'+X(z).toFixed(1)+' '+Y(pdf(z)).toFixed(1);d+=' L'+X(hi)+' '+y0+'Z';
+  s.append(el('path',{d,fill:soft,stroke:st,'stroke-width':1.5}));
+  let t='M'+X(b)+' '+y0;for(let z=b;z<=hi;z+=0.02)t+=' L'+X(z).toFixed(1)+' '+Y(pdf(z)).toFixed(1);t+=' L'+X(hi)+' '+y0+'Z';
+  s.append(el('path',{d:t,fill:acc,opacity:.85}));
+  s.append(el('line',{x1:x0,x2:x1,y1:y0,y2:y0,stroke:line}));
+  for(let z=-4;z<=4;z++){s.append(el('line',{x1:X(z),x2:X(z),y1:y0,y2:y0+5,stroke:line}));s.append(el('text',{x:X(z),y:y0+20,'text-anchor':'middle'},z))}
+  s.append(el('line',{x1:X(0),x2:X(b),y1:60,y2:60,stroke:acc,'stroke-width':1.5,'marker-end':''}));
+  s.append(el('line',{x1:X(b),x2:X(b),y1:50,y2:y0,stroke:acc,'stroke-width':2}));
+  s.append(el('text',{x:(X(0)+X(b))/2,y:52,'text-anchor':'middle',class:'lbl'},'β = '+b.toFixed(2)));
+  s.append(el('text',{x:Math.min(X(b)+10,x1-80),y:150,'text-anchor':'start',style:'fill:'+acc},'failure region'));
+  s.append(el('text',{x:x1,y:y0+20+18,'text-anchor':'end'},'standard normal space, z'));
+}
+function animateRel(){const from=betaShown,to=beta,t0=performance.now();
+  const step=now=>{const k=reduce?1:Math.min(1,(now-t0)/700),e=1-Math.pow(1-k,3);betaShown=from+(to-from)*e;drawRel(betaShown);
+    $('#relB').textContent=betaShown.toFixed(2);const pf=1-Phi(betaShown);$('#relP').textContent=(pf*100).toFixed(pf<0.01?2:1)+'%';if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step)}
+$$('#relSeg button').forEach(b=>b.onclick=()=>{$$('#relSeg button').forEach(x=>x.classList.toggle('on',x===b));beta=+b.dataset.b;animateRel()});
+
+/* ML cases */
+const ML=[
+ {t:'Case I · Missing eave height',d:'Load-effect coefficients for the 32 ft (9.75 m) eave height were held out for all three roof slopes and predicted from the 24 ft (7.32 m) and 40 ft (12.19 m) data (interpolation).',rows:['24 ft','32 ft','40 ft'],cols:['¼:12','1:12','3:12'],test:(r,j)=>r===1},
+ {t:'Case II · Missing roof slope',d:'Coefficients for the 3:12 roof slope were held out at all three eave heights (24, 32 and 40 ft) and predicted from the ¼:12 and 1:12 data, about 67% of the dataset, a test of extrapolation.',rows:['24 ft','32 ft','40 ft'],cols:['¼:12','1:12','3:12'],test:(r,j)=>j===2},
+ {t:'Case III · Missing wind angles',d:'Coefficients at 14 wind angles (20°, 40°, 60°, 80°, 120°, 140°, 160°, 200°, 220°, 240°, 280°, 300°, 320°, 340°; about 20% of the data) were held out and predicted from the other 58 angles at 5° increments.',ang:[20,40,60,80,120,140,160,200,220,240,280,300,320,340]}];
+function drawML(i){const c=ML[i];$('#mlT').textContent=c.t;$('#mlD').textContent=c.d;const s=$('#mlViz');s.innerHTML='';
+  const st=css('--steel'),acc=css('--accent'),soft=css('--steel-soft'),asoft=css('--accent-soft'),fg=css('--fg');
+  if(c.ang){const cx=170,cy=100,r0=46,r1=84;
+    for(let k=0;k<72;k++){const t=(k+1)*5%360,held=c.ang.includes(t),a0=(t-2.3)*Math.PI/180,a1=(t+2.3)*Math.PI/180;
+      const P=(a,r)=>`${cx+Math.sin(a)*r} ${cy-Math.cos(a)*r}`;
+      const w=el('path',{d:`M${P(a0,r0)} L${P(a0,r1)} A${r1} ${r1} 0 0 1 ${P(a1,r1)} L${P(a1,r0)} A${r0} ${r0} 0 0 0 ${P(a0,r0)}Z`,fill:held?acc:soft,stroke:held?acc:st,'stroke-width':.6});
+      s.append(w);if(!reduce)w.animate([{opacity:.1},{opacity:1}],{duration:300,delay:k*12,fill:'backwards'});}
+    [['0°',0],['90°',90],['180°',180],['270°',270]].forEach(([n,a])=>s.append(el('text',{x:cx+Math.sin(a*Math.PI/180)*(r1+12),y:cy-Math.cos(a*Math.PI/180)*(r1+12)+4,'text-anchor':'middle'},n)));
+    s.append(el('text',{x:cx,y:cy-8,'text-anchor':'middle',class:'lbl'},'72 angles'));s.append(el('text',{x:cx,y:cy+6,'text-anchor':'middle',style:'font-size:10px'},'58 train'));s.append(el('text',{x:cx,y:cy+19,'text-anchor':'middle',style:'font-size:10px;fill:'+acc},'14 predict'));
+    return;}
+  const nr=c.rows.length,nc=c.cols.length,gx=110,gy=34,cw=66,ch=44;
+  c.cols.forEach((cn,j)=>s.append(el('text',{x:gx+j*cw+cw/2,y:gy-8,'text-anchor':'middle'},cn)));
+  s.append(el('text',{x:gx+nc*cw/2,y:gy-24,'text-anchor':'middle',class:'lbl'},'roof slope →'));
+  s.append(el('text',{x:gx-10,y:gy-8,'text-anchor':'end',class:'lbl'},'eave height ↓'));
+  c.rows.forEach((rn,r)=>{s.append(el('text',{x:gx-10,y:gy+r*ch+ch/2+4,'text-anchor':'end'},rn));
+    c.cols.forEach((_,j)=>{const held=c.test(r,j);
+      const rc=el('rect',{x:gx+j*cw+3,y:gy+r*ch+3,width:cw-6,height:ch-6,rx:5,fill:held?asoft:soft,stroke:held?acc:st,'stroke-width':held?2:1,'stroke-dasharray':held?'4 3':''});
+      s.append(rc);if(!reduce)rc.animate([{opacity:.2},{opacity:1}],{duration:400,delay:(r*nc+j)*35,fill:'backwards'});
+      s.append(el('text',{x:gx+j*cw+cw/2,y:gy+r*ch+ch/2+4,'text-anchor':'middle',style:'fill:'+(held?acc:st)},held?'predict':'train'))})});
+}
+$$('#mlSeg button').forEach(b=>b.onclick=()=>{$$('#mlSeg button').forEach(x=>x.classList.toggle('on',x===b));drawML(+b.dataset.c)});
+let mlCur=0;$$('#mlSeg button').forEach(b=>b.addEventListener('click',()=>mlCur=+b.dataset.c));
+
+
+/* Nepal climatology chart */
+const NC=[['Amritsar','IN',46.0,47],['Bareilly','IN',48.1,47],['Biratnagar','NP',46.8,47],['Chandigarh','IN',48.3,47],['Gorakhpur','IN',44.6,47],['Guwahati','IN',46.2,50],['Delhi','IN',44.8,47],['Jaipur','IN',44.8,47],['Varanasi','IN',40.4,47],['Lucknow','IN',43.8,47],['Nepalgunj','NP',41.9,47],['Patna','IN',46.0,47],['Pokhara','NP',47.8,47],['Simara','NP',44.7,47],['Kathmandu','NP',45.3,47]];
+let ncOrder='code';
+function drawNC(){const s=$('#ncViz');if(!s)return;s.innerHTML='';const st=css('--steel'),acc=css('--accent'),line=css('--line'),fg=css('--fg');
+  const rows=[...NC].sort(ncOrder==='v'?(a,b)=>b[2]-a[2]:(a,b)=>(a[1]===b[1]?0:a[1]==='NP'?-1:1)||b[2]-a[2]);
+  const x0=110,x1=650,lo=30,hi=50,X=v=>x0+(v-lo)/(hi-lo)*(x1-x0),rh=27,y0=14;
+  for(let v=30;v<=50;v+=5){s.append(el('line',{x1:X(v),x2:X(v),y1:y0-4,y2:y0+rows.length*rh,stroke:line,'stroke-dasharray':v===30?'':'2 3'}));s.append(el('text',{x:X(v),y:y0+rows.length*rh+16,'text-anchor':'middle'},v))}
+  s.append(el('text',{x:x1+40,y:y0-2,'text-anchor':'end'},'V50, m/s'));s.append(el('text',{x:x1,y:y0+rows.length*rh+34,'text-anchor':'end'},'50-year MRI basic wind speed (m/s)'));
+  rows.forEach((r,i)=>{const y=y0+i*rh,np=r[1]==='NP';
+    s.append(el('text',{x:x0-10,y:y+rh/2+3,'text-anchor':'end',class:np?'lbl':''},r[0]));
+    const bar=el('rect',{x:X(lo),y:y+5,width:X(r[2])-X(lo),height:rh-11,rx:3,fill:np?acc:st,opacity:np?.9:.55});s.append(bar);
+    if(!reduce)bar.animate([{width:0},{width:X(r[2])-X(lo)}],{duration:600,delay:i*30,easing:'cubic-bezier(.2,.7,.2,1)',fill:'backwards'});
+    s.append(el('text',{x:x1+12,y:y+rh/2+3,'text-anchor':'start',style:'fill:'+fg},r[2].toFixed(1)));
+    s.append(el('line',{x1:X(r[3]),x2:X(r[3]),y1:y+2,y2:y+rh-2,stroke:fg,'stroke-width':2}));});
+  s.append(el('text',{x:X(47),y:y0-6+0,'text-anchor':'middle'},''));
+  const ly=y0+rows.length*rh+30;s.append(el('rect',{x:x0,y:ly-9,width:12,height:10,fill:acc,rx:2}));s.append(el('text',{x:x0+18,y:ly,'text-anchor':'start'},'Nepal'));
+  s.append(el('rect',{x:x0+75,y:ly-9,width:12,height:10,fill:st,opacity:.55,rx:2}));s.append(el('text',{x:x0+93,y:ly,'text-anchor':'start'},'India'));
+  s.append(el('line',{x1:x0+150,x2:x0+150,y1:ly-10,y2:ly+2,stroke:fg,'stroke-width':2}));s.append(el('text',{x:x0+158,y:ly,'text-anchor':'start'},'codified value'));
+}
+$$('#ncSeg button').forEach(b=>b.onclick=()=>{$$('#ncSeg button').forEach(x=>x.classList.toggle('on',x===b));ncOrder=b.dataset.o;drawNC()});
+function redrawAll(){if(window.__wxRebuild)window.__wxRebuild();if($('#p-research').classList.contains('show')){drawKd();drawMap();drawSites();drawRel(betaShown);$('#relB').textContent=betaShown.toFixed(2);const pf=1-Phi(betaShown);$('#relP').textContent=(pf*100).toFixed(pf<0.01?2:1)+'%';drawML(mlCur);drawNC()}}
+
+/* ---------- publications ---------- */
+const PUBS=[
+ {y:2026,type:'journal',t:'Evaluation of wind directionality factors on moments and displacements of a low-rise building',a:'Adhikari, M., & Letchford, C.W.',v:'Engineering Structures, 369(2), 123833',doi:'10.1016/j.engstruct.2026.123833',k:'Kd ASCE 7-22 XIMIS de Haan extreme value superstation'},
+ {y:2025,type:'journal',t:'Exploring wind load effects on structures: An insight into machine learning applications',a:'Adhikari, M., & Letchford, C.W.',v:'Wind and Structures, 40(3), 167–177',doi:'10.12989/was.2025.40.3.167',k:'machine learning XGBoost random forest NIST-UWO surrogate'},
+ {y:2023,type:'journal',t:'Extreme wind climatology of Nepal and northern India',a:'Adhikari, M., & Letchford, C.W.',v:'Wind and Structures, 37(2), 153–161 (Special Issue)',doi:'10.12989/was.2023.37.2.153',k:'wind climate Nepal India design wind speed'},
+ {y:2020,type:'journal',t:'Qualitative evaluation of technical parameter of resiliency: A case study of Nuwakot district, Nepal',a:'Adhikari, M., Bhattarai, A., & Thapa, R.',v:'Journal of Institute of Science and Technology, 25(2), 25–32',doi:'10.3126/jist.v25i2.33731',k:'resilience earthquake Nepal community'},
+ {y:2026,type:'review',t:'Reliability assessment of a low-rise structure under wind loading: Implications for serviceability reliability and the wind directionality factor',a:'Adhikari, M., Letchford, C.W., & Li, M.',v:'Engineering Structures (under review)',k:'Monte Carlo reliability dynamic serviceability'},
+ {y:2026,type:'thesis',t:'A Reliability-Based Framework for Performance Assessment of Low-Rise Buildings Under Directional Wind Loading',a:'Adhikari, M.',v:'Ph.D. Dissertation, Rensselaer Polytechnic Institute, Troy, NY',k:'dissertation reliability directionality machine learning'},
+ {y:2025,type:'conf',t:'Reliability assessment of wind loads on low-rise structures using the NIST aerodynamic database',a:'Adhikari, M., & Letchford, C.W.',v:'15th Americas Conference on Wind Engineering (15ACWE), Missouri S&T, St. Charles, MO, May 19–22',k:'reliability NIST'},
+ {y:2024,type:'conf',t:'Reliability assessment of wind loads on low-rise structures using the NIST aerodynamic database',a:'Adhikari, M., & Letchford, C.W.',v:'7th American Association for Wind Engineering (AAWE) Workshop, Ann Arbor, MI, June 9–11',k:'reliability NIST'},
+ {y:2023,type:'conf',t:'Deep and traditional machine learning models to predict pressure coefficients on low-rise building surfaces',a:'Adhikari, M., & Letchford, C.W.',v:'16th International Conference on Wind Engineering (ICWE16), Florence, Italy, Aug 27–31',k:'deep learning CNN pressure coefficients'},
+ {y:2022,type:'conf',t:'Extreme wind climatology of Nepal and northern India',a:'Adhikari, M., & Letchford, C.W.',v:'14th Americas Conference on Wind Engineering (14ACWE), Texas Tech University, Lubbock, TX, May 17–19',k:'wind climate Nepal'}];
+const TL={journal:'Journal',review:'Under review',conf:'Conference',thesis:'Dissertation'};
+let pf='all';
+function renderPubs(){const q=$('#pubQ').value.toLowerCase().trim();const list=PUBS.filter(p=>(pf==='all'||p.type===pf)&&(!q||(p.t+p.v+p.a+p.k).toLowerCase().includes(q))).sort((a,b)=>b.y-a.y);
+  $('#pubList').innerHTML=list.length?list.map((p,i)=>`<article class="pub reveal" style="animation-delay:${i*40}ms"><div class="yr">${p.y}</div><div style="min-width:0"><h3>${p.t}</h3><div class="meta">${p.a.replace('Adhikari, M.','<b>Adhikari, M.</b>')} · <i>${p.v}</i></div><div class="acts"><span class="badge ${p.type==='review'?'rev':''}">${TL[p.type]}</span>${p.doi?`<a class="mini" href="https://doi.org/${p.doi}" target="_blank" rel="noopener">DOI ↗</a>`:''}<button class="mini" data-cite="${PUBS.indexOf(p)}">Copy citation</button></div></div></article>`).join(''):'<div class="empty">No matches. Try “reliability” or “machine learning”.</div>';}
+$('#pubQ').addEventListener('input',renderPubs);
+$$('#pubSeg button').forEach(b=>b.onclick=()=>{$$('#pubSeg button').forEach(x=>x.classList.toggle('on',x===b));pf=b.dataset.f;renderPubs()});
+document.addEventListener('click',e=>{const b=e.target.closest('[data-cite]');if(!b)return;const p=PUBS[+b.dataset.cite];copy(`${p.a} (${p.y}). ${p.t}. ${p.v}.${p.doi?' https://doi.org/'+p.doi:''}`,'Citation copied')});
+renderPubs();
+
+/* ---------- experience ---------- */
+const EXP=[
+ {w:'Sep 2026 – present',now:1,t:'Postdoctoral Fellow',o:'Dept. of Civil & Environmental Engineering, Auburn University, AL · Supervisor: Dr. David Roueche',b:['Research on wind climate, wind engineering and structural engineering.','Developing a framework for assessing and communicating individualized structural wind risk to residents.','Appointed as TES Research Support until Ph.D. conferral (Dec 2026), then Postdoctoral Fellow.']},
+ {w:'2021 – 2026',t:'Graduate Research Assistant',o:'Rensselaer Polytechnic Institute, Troy, NY · Advisor: Prof. Chris Letchford',b:['Built a Monte Carlo reliability framework for low-rise buildings integrating directional wind climate, wind-tunnel pressure histories, dynamic response and uncertainty.','Directional extreme value analysis (XIMIS, de Haan/GPD) of thunderstorm and synoptic records at six U.S. sites, with a superstation approach for data-sparse locations.','Quantified response-based wind directionality factors (0.47–0.95) and showed where the ASCE 7-22 value of 0.85 is unconservative (Engineering Structures).','Showed dynamic effects reduce serviceability reliability of a code-compliant, nominally rigid steel portal frame from β = 2.56 to 1.81.','Developed Decision Tree, Random Forest and XGBoost surrogates for wind load effects using the NIST–UWO aerodynamic database (R² up to 0.99 for interpolation; lower for roof-slope extrapolation); explored ANN/CNN models for pressure coefficients.','Processed and analyzed long-term wind datasets to develop extreme wind climatology and basic wind speed maps for Nepal and northern India.','Developed finite-element models of steel building systems in SAP2000 for directional wind response and reliability analysis.']},
+ {w:'2021 – 2026',t:'Teaching Assistant',o:'Rensselaer Polytechnic Institute, Troy, NY',b:['Courses: Structural Analysis, Fluid Mechanics, Applied Hydrology and Design, Engineering Design.','In every course: led recitations, supervised laboratory sessions, held office hours, graded homework and examinations, and proctored exams.','Taught SAP2000 (Structural Analysis) and HEC-HMS (Applied Hydrology and Design) to undergraduates.','Mentored students on coursework and design projects; helped develop instructional materials.']},
+ {w:'2018 – 2021',t:'Senior Civil Engineer',o:'Paragon Engineering Consultancy and Research Center Pvt. Ltd., Nepal',b:['Performed structural analysis and design of residential and commercial reinforced-concrete and steel buildings under gravity, wind and seismic loads.','Prepared construction drawings, connection details and structural detailing in AutoCAD.','Applied load combinations and design standards for gravity, wind and seismic loading.','Coordinated with architects, contractors and regulatory agencies to ensure safe, code-compliant construction.','Conducted site visits to verify structural implementation and resolve field issues.','Developed cost estimates, technical reports and engineering documentation for government and private clients.']},
+ {w:'2016 – 2018',t:'Coordinator / Civil Engineer',o:'National Society for Earthquake Technology – Nepal (NSET)',b:['Performed structural evaluation and design support for building systems.','Conducted site inspections, quality control and construction supervision, including on-the-job training sites.','Assisted in seismic-resistant design practices and delivered training programs.','Prepared engineering drawings, cost estimates, reports and technical documentation.']},
+ {w:'2015 – 2016',t:'Volunteer, Post-Earthquake Damage Assessment',o:'National Society for Earthquake Technology – Nepal (NSET) · 2015 Gorkha earthquake',b:['Conducted post-disaster structural damage assessments of residential buildings after the 2015 Nepal earthquake.','Evaluated structural damage, load paths and failure mechanisms.','Contributed to engineering reports used for rehabilitation and reconstruction planning.']}];
+$('#timeline').innerHTML=EXP.map((e,i)=>`<div class="tl-item ${e.now?'now':''} reveal" style="animation-delay:${i*70}ms"><div class="when">${e.w}</div><h3>${e.t}</h3><div class="org">${e.o}</div>${i<2?`<ul>${e.b.map(x=>`<li>${x}</li>`).join('')}</ul>`:`<ul>${e.b.map(x=>`<li>${x}</li>`).join('')}</ul>`}</div>`).join('');
+const SK={'Hazard & reliability':['Extreme value analysis (XIMIS, GPD, Gumbel, GEV)','Directional wind hazard','Monte Carlo simulation','Fragility curves','Uncertainty quantification'],
+ 'Structural':['Linear & dynamic time-history','Modal & PSD analysis','Wind tunnel pressure data','Performance-based design','Wind & seismic design'],
+ 'Machine learning & data':['XGBoost / RF / DT','ANN / CNN / Transformer','Surrogate modeling','Causal inference (IV, DiD)','NIST–UWO & TPU datasets'],
+ 'Software':['SAP2000','ETABS','OpenSees / OpenSeesPy','ANSYS','Altair HyperWorks','Siemens NX','AutoCAD','Revit','SketchUp','QGIS','HEC-HMS'],
+ 'Programming':['Python (NumPy, SciPy, scikit-learn)','MATLAB','LaTeX','HTML / JavaScript'],
+ 'Codes':['ASCE 7','IBC','AISC','ACI','Indian Standards','Nepal Building Code']};
+$('#skills').innerHTML=Object.entries(SK).map(([k,v])=>`<div class="skill-group"><h4>${k}</h4><div class="chips">${v.map(x=>`<span class="chip">${x}</span>`).join('')}</div></div>`).join('');
+if(matchMedia('(max-width:860px)').matches)$('#expGrid').style.gridTemplateColumns='1fr';
+matchMedia('(max-width:860px)').addEventListener?.('change',m=>$('#expGrid').style.gridTemplateColumns=m.matches?'1fr':'minmax(0,1.3fr) minmax(0,.7fr)');
+
+/* ---------- service ---------- */
+const REV=[['Journal of Structural Engineering (ASCE)','2026','Shear lag in steel–concrete composite box girders','Experimental and theoretical study across shear connection degrees'],
+ ['Wind and Structures','Aug 2026','Typhoon wind speeds on super-tall buildings','Deep learning for non-Gaussian wind characteristics'],
+ ['Journal of Structural Engineering (ASCE)','Jul 2026','Vortex-induced vibration control of long-span bridges','Tuned mass damper inerter dynamics'],
+ ['Journal of Structural Engineering (ASCE)','Apr 2026','Scoured pile-group bridge foundations','Probabilistic capacity modeling with explainable machine learning']];
+$('#reviews').innerHTML=REV.map(([j,y,t,d],n)=>`<div class="card review lift"><span class="rn">0${n+1}</span><div class="eyebrow">${y} · Reviewer</div><h3 style="margin-top:8px">${j}</h3><p style="color:var(--fg);font-weight:500">${t}</p><p>${d}</p></div>`).join('');
+const CONF=[['May 19–22, 2025','15th Americas Conference on Wind Engineering (15ACWE)','Missouri University of Science and Technology · St. Charles, Missouri, USA','Reliability assessment of wind loads on low-rise structures using the NIST aerodynamic database','Adhikari, M., & Letchford, C.W.'],
+ ['June 9–11, 2024','7th American Association for Wind Engineering (AAWE) Workshop','University of Michigan · Ann Arbor, Michigan, USA','Reliability assessment of wind loads on low-rise structures using the NIST aerodynamic database','Adhikari, M., & Letchford, C.W.'],
+ ['August 27–31, 2023','16th International Conference on Wind Engineering (ICWE16)','Florence, Italy','Deep and traditional machine learning models to predict pressure coefficients on low-rise building surfaces','Adhikari, M., & Letchford, C.W.'],
+ ['May 17–19, 2022','14th Americas Conference on Wind Engineering (14ACWE)','National Wind Institute, Texas Tech University · Lubbock, Texas, USA','Extreme wind climatology of Nepal and northern India','Adhikari, M., & Letchford, C.W.']];
+$('#confs').innerHTML=CONF.map(([w,t,o,ti,au])=>`<div class="tl-item"><div class="when">${w}</div><h3>${t}</h3><div class="org">${o}</div><p style="margin-top:8px;font-weight:500">“${ti}”</p><p class="muted" style="font-size:.9rem;margin-top:2px">${au} · Presenter</p></div>`).join('');
+
+/* ---------- contact form ---------- */
+if($('#msgForm'))$('#msgForm').addEventListener('submit',e=>{e.preventDefault();const txt=`To: manozadhikari28@gmail.com\nSubject: ${$('#fType').value} — ${$('#fName').value}${$('#fOrg').value?' ('+$('#fOrg').value+')':''}\n\n${$('#fMsg').value}`;copy(txt,'Message copied. Paste it into your email.')});
+
+/* ---------- CV page ---------- */
+(function(){
+ const sec=(t,h)=>`<section class="cv-sec" style="margin:0"><h2>${t}</h2><div style="min-width:0">${h}</div></section>`;
+ const row=(t,d,o,b)=>`<div class="cv-row"><div class="t">${t}</div><div class="d">${d}</div>${o?`<div class="o">${o}</div>`:''}${b&&b.length?`<details><summary>Details</summary><ul>${b.map(x=>`<li>${x}</li>`).join('')}</ul></details>`:''}</div>`;
+ const cite=p=>`<p class="cv-cite">${p.a.replace('Adhikari, M.','<b>Adhikari, M.</b>')} (${p.y}). ${p.t}. <i>${p.v}</i>.${p.doi?` <a href="https://doi.org/${p.doi}" target="_blank" rel="noopener">doi:${p.doi}</a>`:''}</p>`;
+ const byType=t=>PUBS.filter(p=>p.type===t).sort((a,b)=>b.y-a.y);
+ let h='';
+ h+=sec('Research interests','<p>Resilience of infrastructure to extreme and compound events; extreme wind hazards and nonstationary hazard modeling; wind directionality and wind loads on structures; structural reliability and performance-based design; community-scale risk assessment; physics-informed and uncertainty-aware machine learning, surrogate models and digital twins; reliability-based code calibration.</p>');
+ h+=sec('Education',row('Ph.D., Civil Engineering','2026','Rensselaer Polytechnic Institute, Troy, NY · Advisor: Prof. Chris Letchford · Dissertation: <i>A Reliability-Based Framework for Performance Assessment of Low-Rise Buildings Under Directional Wind Loading</i> · Committee: C. Letchford (Chair), D. Lander, M. Li, M.Z. Naser · Defended; all requirements completed; formal conferral December 2026')+row('M.Eng., Civil Engineering','2025','Rensselaer Polytechnic Institute, Troy, NY')+row('B.E., Civil Engineering','2015','Tribhuvan University, Nepal'));
+ h+=sec('Research appointments',EXP.filter(e=>/Postdoctoral|Research Assistant/.test(e.t)).map(e=>row(e.t,e.w,e.o,e.b)).join(''));
+ h+=sec('Teaching',EXP.filter(e=>/Teaching/.test(e.t)).map(e=>row(e.t,e.w,e.o,e.b)).join(''));
+ h+=sec('Professional experience',EXP.filter(e=>!/Postdoctoral|Research Assistant|Teaching/.test(e.t)).map(e=>row(e.t,e.w,e.o,e.b)).join(''));
+ h+=sec('Publications','<div class="cv-sub">Peer-reviewed journal articles</div>'+byType('journal').map(cite).join('')+'<div class="cv-sub">Manuscripts under review</div>'+byType('review').map(p=>`<p class="cv-cite">${p.a.replace('Adhikari, M.','<b>Adhikari, M.</b>')} ${p.t}. <i>${p.v}</i>.</p>`).join('')+'<div class="cv-sub">Dissertation</div>'+byType('thesis').map(cite).join(''));
+ h+=sec('Conference presentations',CONF.map(([w,t,o,ti,au])=>`<p class="cv-cite">${au.replace('Adhikari, M.','<b>Adhikari, M.</b>')} “${ti}.” <i>${t}</i>, ${o.replace(' · ',', ')}, ${w}.</p>`).join(''));
+ h+=sec('Professional service','<div class="cv-sub">Journal peer review (4 manuscripts)</div>'+row('<i>Journal of Structural Engineering</i> (ASCE)','3 manuscripts, 2026')+row('<i>Wind and Structures</i> (Techno-Press)','1 manuscript, 2026'));
+ h+=sec('Travel support',row('Conference travel funding','2024, 2025','Department of Civil and Environmental Engineering, School of Engineering, and Office of Graduate Education, Rensselaer Polytechnic Institute · Supported presentations at the 7th AAWE Workshop (Ann Arbor, MI, 2024) and the 15th Americas Conference on Wind Engineering (St. Charles, MO, 2025)'));
+ h+=sec('Technical skills',Object.entries(SK).map(([k,v])=>`<p style="margin-bottom:6px"><b>${k}:</b> ${v.join(', ')}</p>`).join(''));
+ h+=sec('Memberships','<p>American Society of Civil Engineers (ASCE); Nepal Engineering Council; Nepal Engineers’ Association</p>');
+ h+=sec('Continuing education','<p>Applications in Engineering Mechanics, Georgia Institute of Technology (Coursera), 2019</p><p style="margin-top:6px">Mechanics of Materials IV: Deflections, Buckling, Combined Loading &amp; Failure Theories, Georgia Institute of Technology (Coursera), 2019</p>');
+ h+=sec('Languages','<p>English, Nepali, Hindi</p>');
+ $('#cvBody').innerHTML=h;
+ const btn=$('#cvExpand');btn.onclick=()=>{const ds=$$('#cvBody details');const open=!ds.every(d=>d.open);ds.forEach(d=>d.open=open);btn.textContent=open?'Collapse all positions':'Expand all positions'};
+})();
+
+route();
+})();
+</script>
+
+</body>
+</html>
